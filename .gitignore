@@ -1,3 +1,4 @@
 
 notebooks/Data/*
 notebooks/.virtual_documents/*
+notebooks/.ipynb_checkpoints/*

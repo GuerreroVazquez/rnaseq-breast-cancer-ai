@@ -1,9 +1,9 @@
 import streamlit as st
 from langchain.llms import OpenAI
-st.set_page_config(page_title="🦜🔗 Quickstart App")
-st.title('🦜🔗 Quickstart App')
+st.set_page_config(page_title="KarenGV - SCAN-B exploration", page_icon=":dna:", layout="wide")
+st.title('SCAN-B exploration')
 
-openai_api_key = st.sidebar.text_input('OpenAI API Key')
+openai_api_key = st.secrets.get('OPENAI_API')
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)

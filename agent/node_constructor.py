@@ -21,7 +21,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('mirkat.log'),
+        logging.FileHandler('SCAN-B_AI.log'),
         logging.StreamHandler()
     ]
 )
@@ -31,12 +31,12 @@ GOOGLE_API_KEY = st.secrets.get('GEMINI_API')
 
 
 class node:
-    def __init__(self, llm=None, instructions=None, functions=None, welcome=None, logging_key = None):
+    def __init__(self, llm=None, instructions=None, functions=None, welcome=None, logging_key = None, api_key=GOOGLE_API_KEY):
         self.llm = llm
         self.instructions = instructions
         self.functions = functions
         self.welcome = welcome
-        self.client = genai.Client(api_key=GOOGLE_API_KEY)
+        self.client = genai.Client(api_key=api_key)
         self.logging_key = logging_key
     def get_node(self, state):
         return None
@@ -72,8 +72,8 @@ class HumanNode(node):
 
 
 class ChatbotNode(node):
-    def __init__(self, llm=None, instructions=None, functions=None, welcome=None, complete_answer=None, limit_trys=5):
-        super().__init__(llm, instructions, functions, welcome)
+    def __init__(self, llm=None, instructions=None, functions=None, welcome=None, complete_answer=None, limit_trys=5, api_key=GOOGLE_API_KEY):
+        super().__init__(llm, instructions, functions, welcome, api_key)
         self.llm_master=ChatGoogleGenerativeAI(model=self.llm)
         if complete_answer:
             self.complete_answer = complete_answer
@@ -205,17 +205,17 @@ class ChatbotNode(node):
 
 
 class PlotNode(node):
-    def __init__(self, llm=None, instructions=None, functions=None,  welcome=None):
-        super().__init__(llm, instructions, functions, welcome)
-        self.client = genai.Client(api_key=GOOGLE_API_KEY)
+    def __init__(self, llm=None, instructions=None, functions=None,  welcome=None, api_key=GOOGLE_API_KEY):
+        super().__init__(llm, instructions, functions, welcome, api_key)
+        #self.client = genai.Client(api_key=GOOGLE_API_KEY)
         self.set_model()
 
     
 
 class LiteratureNode(node):
-    def __init__(self, llm=None, instructions=None, functions=None,  welcome=None):
-        super().__init__(llm, instructions, functions, welcome)
-        self.client = genai.Client(api_key=GOOGLE_API_KEY)
+    def __init__(self, llm=None, instructions=None, functions=None,  welcome=None, api_key=GOOGLE_API_KEY):
+        super().__init__(llm, instructions, functions, welcome, api_key)
+        #self.client = genai.Client(api_key=GOOGLE_API_KEY)
         self.set_config()
 
     def set_config(self):

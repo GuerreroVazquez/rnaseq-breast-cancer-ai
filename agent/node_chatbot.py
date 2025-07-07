@@ -6,7 +6,6 @@ from agent.instructions import Instructions
 import re
 import json
 from agent.node_constructor import node
-from svglib.svglib import svg2rlg
 
 # get pwd
 import os

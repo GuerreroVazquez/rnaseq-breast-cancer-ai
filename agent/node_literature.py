@@ -26,9 +26,8 @@ GOOGLE_API_KEY = st.secrets.get("GEMINI_API")
 
 
 class LiteratureNode(node):
-    def __init__(self, llm=None, instructions=None, functions=None,  welcome=None):
-        super().__init__(llm, instructions, functions, welcome)
-        self.client = genai.Client(api_key=GOOGLE_API_KEY)
+    def __init__(self, llm=None, instructions=None, functions=None,  welcome=None, api_key=None):
+        super().__init__(llm, instructions, functions, welcome, api_key)
         self.set_config()
 
     def set_config(self):

@@ -32,6 +32,8 @@ GOOGLE_API_KEY = st.secrets.get('GEMINI_API')
 
 class node:
     def __init__(self, llm=None, instructions=None, functions=None, welcome=None, logging_key = None, api_key=GOOGLE_API_KEY):
+        if api_key is None:
+            api_key = GOOGLE_API_KEY
         self.llm = llm
         self.instructions = instructions
         self.functions = functions

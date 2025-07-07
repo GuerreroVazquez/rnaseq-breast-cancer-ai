@@ -90,7 +90,7 @@ def route_chatbot_decision(state: GraphState) -> Literal["sql_processor_node", "
         content = content.replace("***FINISH***", "")
         return END
     else:
-        logging(f"\n\n\n Returning to CHATBOT NODE, key word unrecognized \n\n\n\n")
+        logging.warning(f"\n\n\n Returning to CHATBOT NODE, key word unrecognized \n\n\n\n")
         return CHATBOT_NODE
 
 # Router 3: After a Specialist Processor Node (`sql_processor_node`, `literature_search_node`)

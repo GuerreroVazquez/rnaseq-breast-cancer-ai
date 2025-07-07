@@ -1,4 +1,12 @@
 import streamlit as st
+
+
+st.set_page_config(page_title="KarenGV - SCAN-B exploration", page_icon=":dna:", layout="wide")
+st.title('SCAN-B exploration')
+
+openai_api_key = st.secrets.get('OPENAI_API')
+gemini_api_key = st.secrets.get('GEMINI_API')
+
 from langchain.llms import OpenAI
 
 
@@ -37,16 +45,18 @@ import agent.nodes as nodes
 from agent.graph_state import GraphState
 from agent.langraph_model import get_agent
 
+import logging
 
-st.set_page_config(page_title="KarenGV - SCAN-B exploration", page_icon=":dna:", layout="wide")
-st.title('SCAN-B exploration')
-
-openai_api_key = st.secrets.get('OPENAI_API')
-gemini_api_key = st.secrets.get('GEMINI_API')
+# log to SCANB_AI.log
+logging.basicConfig(
+    filename='SCANB_AI.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 agent = get_agent()
 
 def run_langraph(current_state, config={"recursion_limit": 100}):
-  agent.invoke(current_state, config)
+  return agent.invoke(current_state, config)
 
 def generate_response(input_text):
   llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
@@ -60,5 +70,12 @@ with st.form('my_form'):
   if submitted and openai_api_key.startswith('sk-'):
     initial_state = GraphState()
     initial_state['messages'] = [HumanMessage(content=text)]
+    answer = run_langraph(initial_state)
+    print (f"Answer: {answer}")
+    logging.info(f"Answer: {answer}")
+    anwer_text = answer['messages'].content
+    st.write(anwer_text)
+    
+
 
     

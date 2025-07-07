@@ -4,10 +4,10 @@ import pandas as pd
 from agent.node_chatbot import ChatbotNode
 from agent.node_plot import PlotNode
 from agent.node_literature import LiteratureNode
-from dotenv import load_dotenv
 from agent.instructions import Instructions
 from agent.literature_functions import LiteratureTools
 from langgraph.prebuilt import ToolNode
+import streamlit as st
 
 
 current_path = os.path.dirname(os.path.abspath(__file__))
@@ -15,9 +15,8 @@ current_path = os.path.dirname(os.path.abspath(__file__))
 
 
 # Load .env file
-load_dotenv()
 # Get the API key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets.get("GEMINI_API")
 # set the models
 LOCATION = "europe-west1"
 LLM_ROUTE = "gemini-1.5-flash"

@@ -13,12 +13,12 @@ import base64
 import io, os
 from agent.node_constructor import node
 import json
+import streamlit as st
 
 
-load_dotenv()
 
 # Get the API key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets.get("GEMINI_API")
 
 class PlotNode(node):
     def __init__(self, llm=None, instructions=None, functions=None,  welcome=None):

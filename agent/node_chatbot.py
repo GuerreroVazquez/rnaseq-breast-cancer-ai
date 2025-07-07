@@ -6,7 +6,6 @@ from agent.instructions import Instructions
 import re
 import json
 from agent.node_constructor import node
-
 # get pwd
 import os
 pwd = os.getcwd()

@@ -5,7 +5,6 @@ from langchain_core.messages import (
     )
 from google.genai import types
 from google import genai 
-from dotenv import load_dotenv
 import os
 # save logs
 import logging
@@ -13,14 +12,15 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('mirkat.log'),
+        logging.FileHandler('SCAN_B_AI.log'),
         logging.StreamHandler()
     ]
 )
-load_dotenv()
+import streamlit as st
+
 
 # Get the API key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets.get("GEMINI_API")
 
 
 

@@ -26,9 +26,35 @@ RAG_INSTRUCTIONS : |
 
 MODEL_INSTRUCTIONS: |
   """
-  You have access to the following functions to use:
-  - `get_table_header(table_name)`: Use this function to check if all the necessary columns are present in a table.
-  - `recommend_treatment(clinical_data, genomic_data)`: Use this function to obtain a ranked list of treatment options based on the provided clinical and genomic data. The function returns a justification for the recommended treatment, including relevant survival predictions.
+  You have access to the following functions to analyze genomic and clinical data and predict treatment outcomes. Use these functions strategically to answer user questions related to treatment options and survival predictions.
+
+  - `predict_clinical_features(gene_expression_data)`:
+    - Description: Predicts clinical feature values based on gene expression data.
+    - Input: A dataframe containing gene expression data for the selected genes.
+    - Output: A dataframe containing the predicted clinical feature values.
+
+  - `predict_survival_outcomes(clinical_features)`:
+    - Description: Predicts survival probabilities for four treatment combinations (chemotherapy, endocrine therapy, both, or neither) based on clinical features.
+    - Input: A dataframe containing the clinical feature values.
+    - Output: A dataframe with survival probabilities for each treatment combination. The columns should be labeled 'Chemo', 'Endo', 'Both', and 'None', representing the predicted survival probability for each treatment.
+
+  - `validate_data(data, data_type)`:
+    - Description: Checks that the input dataframe contains the correct genes (for gene expression data) or clinical features (for clinical data). Returns an error if the input is not correct.
+    - Input:
+      - `data`: The dataframe to validate.
+      - `data_type`: A string indicating the type of data ('gene_expression', 'clinical_features').
+    - Output: `True` if the data is valid. Raises an error if the data is not valid and describes the issues.
+
+  - `recommend_treatment(survival_probabilities)`:
+    - Description: Recommends the best treatment option based on the survival probabilities.
+    - Input: A dataframe containing survival probabilities for each treatment combination ('Chemo', 'Endo', 'Both', 'None').
+    - Output: A string that provides the name of the recommended treatment. Also includes a brief justification for the recommendation based on the predicted survival probabilities.
+
+  IMPORTANT CONSIDERATIONS:
+  1. ALWAYS validate incoming data using `validate_data` BEFORE using it in any prediction function. This is crucial for preventing errors.
+  2. If `validate_data` returns an error, immediately report the error to the user. DO NOT proceed with any further calculations or predictions.
+  3. Ensure that the dataframes passed to the functions have the correct format. The dataframes are pandas dataframes.
+  4. Explain clearly to the user the rationale behind the recommended treatment in simple, understandable terms.
   """
 
 PLOT_INSTRUCTIONS: |
@@ -95,10 +121,8 @@ FORMAT_ANSWER_INSTRUCTIONS: |
       `Adhere to these rules:`,
       `Maintain consistent formatting from previous turns when relevant.`,
       `Avoid using the same node repeatedly without new information or user input.`,
-      `Prioritize small, focused follow-ups (e.g., narrow literature searches, specific SQL queries) to refine the answer.`,
       `If the query asks for a plot and no image was generated, answer NO.`,
       `If a plot is needed, provide explicit data values.`,
-      `If a table is requested and none exists, answer NO.`,
       `If the query is outside the scope (e.g., direct medical advice), answer YES and explain why it can't be addressed.`,
       `Use 'trys' and 'try_limit' to decide when to stop iterating. If the limit is reached, provide the best possible summary.`,
       `Always consider if a different node could help. Conclude only when no productive paths remain.`,

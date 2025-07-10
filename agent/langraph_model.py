@@ -28,7 +28,7 @@ master_node = nodes.master_node
 literature_search_node = nodes.literature_search_node
 plot_node = nodes.plot_node
 model_node = nodes.model_node
-
+rag_node = nodes.rag_node
 
 # start defininf graph
 
@@ -38,6 +38,7 @@ LITERATURE_NODE = "literature_search_node"
 TOOL_NODE = "execute_tools" # Name for the ToolNode instance
 PLOT_NODE = "plot_node"
 MODEL_NODE = "model_node"
+RAG_NODE = "rag_node"
 
 
 
@@ -81,6 +82,8 @@ def route_chatbot_decision(state: GraphState) -> Literal["sql_processor_node", "
         return PLOT_NODE
     elif "***MODEL_NODE***" in content:
         return MODEL_NODE
+    elif "***RAG_NODE***" in content:
+        return RAG_NODE
     
     elif "***ANSWER_DIRECTLY***" in content:
         content = content.replace("***ANSWER_DIRECTLY***", "")
@@ -125,6 +128,7 @@ workflow.add_node(CHATBOT_NODE, master_node.get_node)
 workflow.add_node(LITERATURE_NODE, literature_search_node.get_node)
 workflow.add_node(PLOT_NODE, plot_node.get_node)
 workflow.add_node(MODEL_NODE, model_node.get_node)
+workflow.add_node(RAG_NODE, rag_node.get_node)
 
 # --- Define Edges ---
 
@@ -135,6 +139,7 @@ workflow.set_entry_point(CHATBOT_NODE) # Start with a hello input
 workflow.add_edge(PLOT_NODE, CHATBOT_NODE)
 workflow.add_edge(LITERATURE_NODE, CHATBOT_NODE)
 workflow.add_edge(MODEL_NODE, CHATBOT_NODE)
+workflow.add_edge(RAG_NODE, CHATBOT_NODE)
 # 2. From Human Node
 
 
@@ -146,6 +151,7 @@ workflow.add_conditional_edges(
         LITERATURE_NODE: LITERATURE_NODE,   # Route to Literature searcher
         PLOT_NODE: PLOT_NODE,              # Route to plot node
         CHATBOT_NODE: CHATBOT_NODE,         # Route back to chatbot for further processing
+        RAG_NODE: RAG_NODE,                # Route to rag node
         MODEL_NODE: MODEL_NODE,            # Route to model
         END: END                           # Route to end (though usually handled via human)
     }
@@ -163,7 +169,9 @@ initial_state = {
     "original_query": "",
     "answer_source": "Human",
     "trys": 0,
-    "history": [] 
+    "history": [],
+    "thread_id": "1" ,
+    "file_path": ""
 }
 current_state = initial_state
 config = {"recursion_limit": 100, "configurable": {"thread_id": "1"}}
@@ -177,3 +185,6 @@ def get_agent():
     Returns the compiled agent workflow.
     """
     return agent
+
+def run_langraph(current_state, config={"recursion_limit": 100,  "configurable": {"thread_id": "1"}}):
+  return agent.invoke(current_state, config)

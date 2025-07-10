@@ -7,12 +7,13 @@ from langchain_core.messages import (
 
 )
 from agent.graph_state import GraphState
-from agent.langraph_model import get_agent
+from agent.langraph_model import run_langraph
 from agent.create_db import (HtmlVectorDatabaseManager, DEFAULT_CORPUS_DIR,
                              DEFAULT_CHROMA_DB_DIR, DEFAULT_EMBEDDINGS_MODEL,
                              DEFAULT_CHUNK_SIZE, DEFAULT_CHUNK_OVERLAP)
 
 import logging
+from agent.instructions import Instructions
 
 # Logging configuration
 logging.basicConfig(
@@ -28,65 +29,93 @@ st.title('SCAN-B exploration')
 
 openai_api_key = st.secrets.get('OPENAI_API')
 gemini_api_key = st.secrets.get('GEMINI_API')
-
-agent = get_agent()
-
-CORPUS_DIR = os.getenv("CORPUS_DIR", DEFAULT_CORPUS_DIR)
-CHROMA_DB_DIR = os.getenv("CHROMA_DB_DIR", DEFAULT_CHROMA_DB_DIR)
-EMBEDDINGS_MODEL = os.getenv("EMBEDDINGS_MODEL", DEFAULT_EMBEDDINGS_MODEL)
-LLM_MODEL_NAME = os.getenv("MODEL", "gemini-2.0-flash")
-CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", DEFAULT_CHUNK_SIZE))
-CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", DEFAULT_CHUNK_OVERLAP))
-K_RETRIEVAL = int(os.getenv("K_RETRIEVAL", 5))
+os.environ["GOOGLE_API_KEY"] = gemini_api_key
 
 
-if 'db_manager' not in st.session_state:
-    print("Initializing HtmlVectorDatabaseManager...")
-    st.session_state['db_manager'] = HtmlVectorDatabaseManager(
-        corpus_dir=CORPUS_DIR,
-        chroma_db_dir=CHROMA_DB_DIR,
-        embeddings_model_name=EMBEDDINGS_MODEL,
-        chunk_size=CHUNK_SIZE,
-        chunk_overlap=CHUNK_OVERLAP
-    )
-    print("HtmlVectorDatabaseManager stored in session_state.")
 
 
-if 'vector_store' not in st.session_state or st.session_state['vector_store'] is None:
-    print("Initializing or loading vector store...")
-    # initialize_vector_store returns the Chroma instance or None on failure
-    st.session_state['vector_store'] = st.session_state['db_manager'].initialize_vector_store(force_reindex=False)
 
-    if st.session_state['vector_store'] is None:
-        st.error("Failed to initialize or load vector database. RAG functionality will be unavailable.")
-        # You might want to stop the app or disable related features here
+
+uploaded_file = st.file_uploader("Upload your CSV file", type=['csv'])
+
+if uploaded_file is not None:
+    # Ensure 'user' directory exists
+    user_folder = "user"
+    os.makedirs(user_folder, exist_ok=True)
+
+    # Save the uploaded file
+    file_path = os.path.join(user_folder, uploaded_file.name)
+    with open(file_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+
+    st.success(f"Saved file to {file_path}")
+    
+
+
+if 'messages' not in st.session_state:
+    st.session_state.messages = []
+
+if 'user_input' not in st.session_state:
+    st.session_state.user_input = ""
+
+for msg in st.session_state.messages:
+    if isinstance(msg, HumanMessage):
+        st.markdown(f"**You:** {msg.content}")
     else:
-        print("Vector store initialized/loaded and stored in session_state.")
+        st.markdown(f"**AI:** {msg.content}")
+
+
+
+user_input = st.text_input("Your message:", value=st.session_state.user_input, key="input")
+
+if st.button("Send"):
+
+    if user_input.strip() != "":
+        # Add user message
+        st.session_state.messages.append(HumanMessage(content=user_input))
+        print(f"User input: {user_input}")
+        logging.info(f"User input: {user_input}")
+        # Run agent with full history
+        state = GraphState()
+        state ={
+                  "messages": [],
+                  "table": None,
+                  "answer": "",
+                  "finished": False,
+                  "request": None,
+                  "original_query": "",
+                  "answer_source": "Human",
+                  "trys": 0,
+                  "history": [],
+                  "thread_id": "1" ,
+                  "file_path": ""
+              }
+        state['history'] = st.session_state.messages
+        state["messages"] = [HumanMessage(content=user_input)]
+        state["file_path"] = file_path if uploaded_file else None
+
+        answer = run_langraph(state)
+        if answer:
+          logging.info(f"Answer: {answer}")
+          final_answer = answer['messages']
+          if isinstance(final_answer, str):
+              model_reply = final_answer
+          else:
+              model_reply = final_answer.content
+          if "<image>" in model_reply:
+              # get the image adress in the labels <image>...</image>
+              image= model_reply.split("<image>")[1].split("</image>")[0]
+              st.image(image, caption="Generated Image", use_column_width=True)
+          # Add model reply
+          st.session_state.messages.append(final_answer)
+
+        # Clear input box
+        st.session_state.user_input = ""
+
+
+        # Rerun to show new messages
+        st.rerun()
 
 
 
 
-def run_langraph(current_state, config={"recursion_limit": 100,  "configurable": {"thread_id": "1"}}):
-  return agent.invoke(current_state, config)
-
-def generate_response(input_text):
-  llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-  st.info(llm(input_text))
-
-with st.form('my_form'):
-  text = st.text_area('Enter text:', 'What are the three key pieces of advice for learning how to code?')
-  submitted = st.form_submit_button('Submit')
-  if not openai_api_key.startswith('sk-'):
-    st.warning('Please enter your OpenAI API key!', icon='⚠')
-  if submitted and openai_api_key.startswith('sk-'):
-    initial_state = GraphState()
-    initial_state['messages'] = [HumanMessage(content=text)]
-    answer = run_langraph(initial_state)
-    print (f"Answer: {answer}")
-    logging.info(f"Answer: {answer}")
-    anwer_text = answer['messages'].content
-    st.write(anwer_text)
-    
-
-
-    

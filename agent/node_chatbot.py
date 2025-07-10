@@ -81,6 +81,7 @@ class ChatbotNode(node):
         compleate = False
         history = state.get("history", [])
         self.log_message(f"History: {history}")
+        response=AIMessage(content="")
         if len(history) > 0:
             messages = history[-1]
         else:
@@ -139,7 +140,7 @@ class ChatbotNode(node):
             finished = True
             print(f"Final response is {messages.content}")
             new_message = AIMessage(content=f"****FINAL_RESPONSE**** {messages.content}")
-            response=AIMessage(content="")
+            
             
         self.log_message(f"State before updating: {state}")
         self.log_message(f"Response: {response.content}")

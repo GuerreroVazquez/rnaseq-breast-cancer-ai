@@ -29,22 +29,37 @@ ROUTING_INSTRUCTIONS : |
      - "Can you predict survival?"  
      - "Run the model on this gene expression file"  
      - "Predict clinical features from this expression profile"
+ 
+  2. `***RAG_NODE***`:  
+     Use this if the user asks for detailed background about the **SCAN-B AI system itself**, such as:
+      - How the models were developed or trained.
+      - What datasets were used.
+      - How samples were collected, processed, or validated.
+      - Limitations or intended use of the models and data.
+      - Any questions about the research teams, labs, or data stewardship.
+     Examples:  
+     - "Who developed the SCAN-B model?"  
+     - "What data did you train this model on?"  
+     - "How were the samples collected?"
+     - "Can you explain the preprocessing steps for gene expression data?"
+     - "Who maintains this dataset?"
 
-  2. `***ROUTE_TO_LITERATURE***`:  
+
+  3. `***ROUTE_TO_LITERATURE***`:  
      Use this if the question asks about biological mechanisms, treatment mechanisms, clinical trials, or other scientific background that is not derived from the model output.  
      Examples:  
      - "How does chemotherapy affect HER2+ patients?"  
      - "Are there papers on KI67 as a marker?"  
      - "Explain how endocrine therapy works"
 
-  3. `***PLOT***`:  
+  4. `***PLOT***`:  
      Use this if the user wants to **visualize** treatment outcomes, survival probabilities, gene distributions, or model predictions.  
      Examples:  
      - "Can you plot the survival probabilities?"  
      - "Show a graph of model outputs"  
      - "Visualize predicted treatments"
 
-  4. `***ANSWER_DIRECTLY***`:  
+  5. `***ANSWER_DIRECTLY***`:  
       Use this only when:
      - The question can be answered immediately from prior conversation or output
      - You need to ask a clarifying question
@@ -55,7 +70,7 @@ ROUTING_INSTRUCTIONS : |
      - "What format should I upload?"  
      - "Hi, can you help me?"
 
-  5. `***FINISH***`:  
+  6. `***FINISH***`:  
      Use this if the user clearly indicates they want to end the conversation.  
      Examples:  
      - "That’s it, thank you!"  
@@ -91,7 +106,7 @@ ROUTING_INSTRUCTIONS : |
   DO NOT include explanations or multiple choices. DO NOT respond with anything outside the specified format.
  """
 
-WELCOME_MSG : |
+WELCOME_MSG_INSTRUCTIONS : |
   Hello there. I am the SCAN-B AI assistant, here to help you explore breast cancer treatment options based on our predictive model. How can I assist you today?
 
 SQL_INSTRUCTIONS : |
@@ -219,7 +234,7 @@ FORMAT_ANSWER_INSTRUCTIONS: |
       `If complete:`,
       {
         `answer`: `YES`,
-        `return`: `A clear, formatted, and self-contained answer.`,
+        `return`: `A clear, formatted, and self-contained answer. It should include all relevant information from the conversation history and the last response as it is the only text the user will see form the history.`,
         `media`: `If an image was generated, include it. Otherwise, leave blank.`
       },
 

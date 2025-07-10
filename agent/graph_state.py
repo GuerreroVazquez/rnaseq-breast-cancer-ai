@@ -22,3 +22,5 @@ class GraphState(TypedDict):
     answer_source: Optional[str]
     trys: int
     history: List[BaseMessage] 
+    thread_id: str
+    file_path: str

@@ -64,6 +64,8 @@ class ModelNode(node):
         history = state.get('history', [])
         # If history is empty, use the last message
         messages = state['request']
+        file_path = state.get('file_path', "")
+        file_path = f"file: {file_path}"
         if not messages:
             self.log_message("Model called with no messages.")
             return state
@@ -86,9 +88,12 @@ class ModelNode(node):
             self.log_message("The message is not str or AIMessage, changing to AIMessage")
             print("The type of the message is: ", type(messages))
             self.log_message(f"The type of the message is: {type(messages)}")
-
+        content = messages.content.strip()
+        content  = content + file_path
+        messages.content = content
         print("The message sent to the Model node is: ", messages)
         self.log_message(f"The message sent to the Model node is: {messages}")
+        
         response = self.run_model(messages)
         self.log_message(f"Model LLM Response: {response}")
         new_answer = AIMessage(content=response.text)

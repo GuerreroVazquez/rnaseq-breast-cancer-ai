@@ -11,7 +11,7 @@ from agent.node_model import ModelNode
 from langgraph.prebuilt import ToolNode
 import streamlit as st
 
-
+vector_store = st.session_state.get('vector_store', None)
 current_path = os.path.dirname(os.path.abspath(__file__))
 
 

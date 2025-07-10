@@ -22,6 +22,7 @@ class Instructions(Enum):
     format_answer='FORMAT_ANSWER'
     literature='LITERATURE'
     model = 'MODEL'
+    rag = 'RAG'
 
    # We don't need to override __init__ or modify self.value
     def get_instruction(self):

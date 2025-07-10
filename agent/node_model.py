@@ -23,7 +23,7 @@ from agent.model_functions import (
     get_column_names,
     rename_columns
 )
-import model_functions as mf
+import agent.model_functions as mf
 
 # Get the API key
 GOOGLE_API_KEY = st.secrets.get("GEMINI_API")
@@ -31,7 +31,7 @@ GOOGLE_API_KEY = st.secrets.get("GEMINI_API")
 class ModelNode(node):
     def __init__(self, llm=None, instructions=None, functions=None, welcome=None):
         super().__init__(llm, instructions, functions, welcome, logging_key="Model Node.- ")
-
+        self.set_model()
     def set_model(self):
             config_tools = types.GenerateContentConfig(
                 system_instruction=self.instructions,
@@ -52,7 +52,7 @@ class ModelNode(node):
         text = messages.content
         print (f"--- Message going to the sql model: {text}---")
         self.log_message(f"Message going to the sql model: {text}")
-        response = self. chat.send_message(text)
+        response = self.chat.send_message(text)
         return response
 
 

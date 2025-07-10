@@ -19,8 +19,7 @@ data processing, and other core components of your application.
 import pytest
 
 from agent.node_constructor import (
-    node,
-    HumanNode
+    node
 )
 from agent.node_chatbot import ChatbotNode
 from agent.node_plot import PlotNode
@@ -63,7 +62,7 @@ def test_create_node() -> None:
 #### Test class SQLNode:
 
 
-def test_sql_node() -> None:
+def test_model_node() -> None:
     """Check that the node is created correctly."""
     model_node = ModelNode(instructions="you can run clinical features predictors", functions=[min, max])
     assert model_node is not None
@@ -77,22 +76,22 @@ def test_sql_node() -> None:
 
 
 
-def test_sql_without_messages() -> None:
+def test_model_without_messages() -> None:
     """Check that the node is a responsive llm node"""
-    sql_node = SQLNode(instructions="you are a SQL expert", functions=[min, max])
+    model_node = ModelNode(instructions="you can run clinical features predictors", functions=[min, max])
     status = {
         "messages": [None],
         "request": None,
         "table": None,
         "answer": "",
         "finished": False}
-    result = sql_node.get_node(status)
+    result = model_node.get_node(status)
     assert result['messages'] == [None]
 
 
-def test_sql_with_messages_str(monkeypatch) -> None:
+def test_model_with_messages_str(monkeypatch) -> None:
     """Check that the node is a responsive llm node"""
-    sql_node = SQLNode(instructions="you are a SQL expert", functions=[min, max])
+    model_node = ModelNode(instructions="you can run clinical features predictors", functions=[min, max])
     status = {
         "messages": [HumanMessage(content="Hi")],
         "request":  AIMessage(content="hi"),
@@ -102,137 +101,40 @@ def test_sql_with_messages_str(monkeypatch) -> None:
         "finished": False}
     def mock_run_model(*args, **kwargs):
         fake_response = GenerateContentResponse
-        fake_response.automatic_function_calling_history= 'many functions'
         fake_response.text = "Risotto alla Milanese"
         return fake_response
 
-    monkeypatch.setattr(sql_node, "run_model", 
+    monkeypatch.setattr(model_node, "run_model", 
                         mock_run_model)
-                        
-    monkeypatch.setattr(sql_node, "get_queries", 
-                        lambda *args, **kwargs: {"query":"result"})
     
-    result = sql_node.get_node(status)
+    result = model_node.get_node(status)
 
     # check messages is AIMessage
     assert isinstance(result['messages'], AIMessage)
     assert result['request'].content == "Risotto alla Milanese"
     assert result['answer'] == AIMessage(content='Risotto alla Milanese')
-    assert result['table'] == {"query":"result"}
     assert result['finished'] is False
 
 
 
 
-def test_sql_with_messages_GenerateContentResponse(monkeypatch) -> None:
+def test_model_with_messages_GenerateContentResponse(monkeypatch) -> None:
     """Check that the node is a responsive llm node"""
-    sql_node = SQLNode(instructions="you are a SQL expert", functions=[min, max])
-    status = {"messages":GenerateContentResponse, "request":"Run a query", "original_query":"question"}
+    model_node = ModelNode(instructions="you are a SQL expert", functions=[min, max])
+    status = {"messages":GenerateContentResponse, "request":"Run a model", "original_query":"question"}
     def mock_run_model(*args, **kwargs):
         fake_response = GenerateContentResponse
-        fake_response.automatic_function_calling_history= 'many functions'
         fake_response.text = "Risotto alla Milanese"
         return fake_response
 
-    monkeypatch.setattr(sql_node, "run_model", 
+    monkeypatch.setattr(model_node, "run_model", 
                         mock_run_model)
-                        
-    monkeypatch.setattr(sql_node, "get_queries", 
-                        lambda *args, **kwargs: {"query":"result"})
     
-    result = sql_node.get_node(status)
+    result = model_node.get_node(status)
 
     # check messages is AIMessage
     assert isinstance(result['messages'], AIMessage)
     assert result['request'].content == "Risotto alla Milanese"
     assert result['answer'] == AIMessage(content='Risotto alla Milanese')
-    assert result['table'] == {"query":"result"}
     assert result['finished'] is False
-
-
-#### Test class PlotNode:
-
-
-
-@pytest.mark.skip("Plot node must be fixed")
-def test_plot_get_node(monkeypatch) -> None:
-    """Check that the node is a responsive llm node"""
-    plot_node = PlotNode(instructions="you are a plot expert", functions=[min, max])
-    status = {"messages":"", 'request':AIMessage(content="Plot A=1, B=2"), "table":'data'}
-    # see current directory 
-
-    plot = pickle.load(open("tests/dummy_files/plot.pkl", "rb"))
-    def mock_run_model(*args, **kwargs):
-        fake_response = GenerateContentResponse
-        fake_response.automatic_function_calling_history= 'many functions'
-        fake_response.text = "Risotto alla Milanese"
-        fake_response.candidates = [Candidate(content=Content(parts=[Part]))]
-        return fake_response
-
-    monkeypatch.setattr(plot_node, "run_model", 
-                            mock_run_model)
-    monkeypatch.setattr(plot_functions.PlotFunctons,
-                        "handle_response",
-                        lambda *args, **kwargs: plot)
-    result = plot_node.get_node(status)
-    print(result)
-    # check messages is AIMessage
-    result_message = result['messages'].content
-    
-    assert "binary_image" in result_message                    
-    assert result['table'] == 'data'
-
-
-#### Test class LiteratureNode:
-
-def test_literature_node() -> None:
-    """Check that the node is created correctly."""
-    literature_node = LiteratureNode(instructions="you are a literature expert", functions=[min, max])
-    assert literature_node is not None
-    assert literature_node.llm is None
-    assert literature_node.welcome is None
-    assert type(literature_node.client) == Client
-    assert literature_node.instructions == "you are a literature expert"
-    assert literature_node.functions == [min, max]
-    assert literature_node.config_with_search is not None
-    assert type(literature_node.config_with_search) == GenerateContentConfig
-
-def test_literature_get_node(monkeypatch) -> None:
-    """Check that the node is a responsive llm node"""
-    literature_node = LiteratureNode(instructions="you are a literature expert", functions=[min, max])
-    status = {"messages":"","request":AIMessage(content="hi")}
-
-    monkeypatch.setattr(literature_node, "run_model", 
-                            lambda *args, **kwargs: "Research done")
-    monkeypatch.setattr(literature_node, "format_text",
-                        lambda *args, **kwargs: ("# markdown text","bibliography", "queries"))
-    result = literature_node.get_node(status)
-    # check messages is AIMessage
-    assert result['messages'] == AIMessage(content='# markdown textbibliography', additional_kwargs={}, response_metadata={})
-
-
-def test_sql_get_node(monkeypatch) -> None:
-    """Check that the node is a responsive llm node"""
-    sql_node = SQLNode(instructions="you are a SQL expert,", functions=[min, max])
-    status = {"messages":"",
-              "request":AIMessage(content="Get one microRNA from the databse"),
-              "original_query":[{'type': 'text', 'text': 'tell me one microRNA from the database'}]
-              }
-    def mock_run_model(*args, **kwargs):
-        fake_response = GenerateContentResponse
-        fake_response.automatic_function_calling_history= 'many functions'
-        fake_response.text = "Mir1"
-        fake_response.candidates = [Candidate(content=Content(parts=[Part]))]
-        return fake_response
-    def mock_get_queries(*args, **kwargs):
-        return {"query":"select * from table"}
-    monkeypatch.setattr(sql_node, "run_model", mock_run_model)
-    monkeypatch.setattr(sql_node, "get_queries", mock_get_queries)
-    result = sql_node.get_node(status)
-    # check messages is AIMessage
-    assert "Mir1" in result['request'].content
-    assert result["answer_source"] == "SQL_NODE"
-    assert result["answer"].content == "Mir1"
-
-
 

@@ -26,6 +26,7 @@ logging.basicConfig(
 master_node = nodes.master_node
 literature_search_node = nodes.literature_search_node
 plot_node = nodes.plot_node
+model_node = nodes.model_node
 
 
 # start defininf graph
@@ -35,6 +36,7 @@ CHATBOT_NODE = "chatbot_router"
 LITERATURE_NODE = "literature_search_node"
 TOOL_NODE = "execute_tools" # Name for the ToolNode instance
 PLOT_NODE = "plot_node"
+MODEL_NODE = "model_node"
 
 
 
@@ -76,6 +78,8 @@ def route_chatbot_decision(state: GraphState) -> Literal["sql_processor_node", "
     elif "***PLOT***" in content:
         #print("---- Routing to plot node ----")
         return PLOT_NODE
+    elif "***MODEL_NODE***" in content:
+        return MODEL_NODE
     
     elif "***ANSWER_DIRECTLY***" in content:
         content = content.replace("***ANSWER_DIRECTLY***", "")
@@ -119,7 +123,7 @@ workflow = StateGraph(GraphState)
 workflow.add_node(CHATBOT_NODE, master_node.get_node)
 workflow.add_node(LITERATURE_NODE, literature_search_node.get_node)
 workflow.add_node(PLOT_NODE, plot_node.get_node)
-
+workflow.add_node(MODEL_NODE, model_node.get_node)
 
 # --- Define Edges ---
 
@@ -129,6 +133,7 @@ workflow.set_entry_point(CHATBOT_NODE) # Start with a hello input
 # Add direct edges
 workflow.add_edge(PLOT_NODE, CHATBOT_NODE)
 workflow.add_edge(LITERATURE_NODE, CHATBOT_NODE)
+workflow.add_edge(MODEL_NODE, CHATBOT_NODE)
 # 2. From Human Node
 
 
@@ -140,6 +145,7 @@ workflow.add_conditional_edges(
         LITERATURE_NODE: LITERATURE_NODE,   # Route to Literature searcher
         PLOT_NODE: PLOT_NODE,              # Route to plot node
         CHATBOT_NODE: CHATBOT_NODE,         # Route back to chatbot for further processing
+        MODEL_NODE: MODEL_NODE,            # Route to model
         END: END                           # Route to end (though usually handled via human)
     }
 )

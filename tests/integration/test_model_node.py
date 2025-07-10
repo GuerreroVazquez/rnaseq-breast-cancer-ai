@@ -72,7 +72,7 @@ def test_agent_model(monkeypatch) -> None:
     llm = "gemini-2.5-flash-preview-04-17"
     instructions  = Instructions.model.get_instruction()
     functions = [validate_data, predict_clinical_features, predict_survival_outcome,
-                 predict_survival_outcomes, recommend_treatment, get_column_names,
+                 predict_survival_outcomes, get_column_names,
                  rename_columns, read_data_from_csv]
     modelNode = ModelNode( llm=llm, instructions=instructions, functions=functions, welcome=None)
     response = modelNode.get_node(state = input_dict)

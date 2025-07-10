@@ -19,7 +19,6 @@ from agent.model_functions import (
     validate_data,
     predict_clinical_features,
     predict_survival_outcomes,
-    recommend_treatment,
     get_column_names,
     rename_columns
 )

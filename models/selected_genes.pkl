@@ -1,0 +1,1 @@
+/home/karen/Documents/GitHub/rnaseq-breast-cancer-ai/notebooks/selected_genes.pkl

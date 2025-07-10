@@ -56,6 +56,30 @@ def test_files_accesibility() -> None:
     ]
     for file in files:
         assert os.path.exists(file), f"File {file} does not exist"
+def test_agent_model(monkeypatch) -> None:
+    """
+    Integration test for the agent stream query functionality.
+    Tests that the agent returns valid streaming responses.
+    """
+    input_dict = {
+        "request": AIMessage(content="Hi'?"),
+        "answer": None,
+        "finished": False,
+        "user_id": "test-user",
+        "session_id": "test-session",
+        "original_query": "Hi"
+    }
+    llm = "gemini-2.5-flash-preview-04-17"
+    instructions  = Instructions.model.get_instruction()
+    functions = [validate_data, predict_clinical_features, predict_survival_outcome,
+                 predict_survival_outcomes, get_column_names,
+                 rename_columns, read_data_from_csv]
+    modelNode = ModelNode( llm=llm, instructions=instructions, functions=functions, welcome=None)
+    response = modelNode.get_node(state = input_dict)
+    print(response)
+    assert response
+    assert response['answer_source']=='MODEL_NODE'
+
 
 def test_agent_model_clinical(monkeypatch) -> None:
     """
@@ -68,7 +92,7 @@ def test_agent_model_clinical(monkeypatch) -> None:
         "finished": False,
         "user_id": "test-user",
         "session_id": "test-session",
-        "original_query": "What is the survival probability of these people"
+        "original_query": " What is the survival of the people which clinical data is in path 'dummy_files/clinical_data.csv'?"
     }
     llm = "gemini-2.5-flash-preview-04-17"
     instructions  = Instructions.model.get_instruction()

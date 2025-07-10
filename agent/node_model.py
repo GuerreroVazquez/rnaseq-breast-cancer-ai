@@ -49,8 +49,8 @@ class ModelNode(node):
         print(f"--- Message entering run model: {messages}---")
         self.log_message(f"Message entering run model: {messages}")
         text = messages.content
-        print (f"--- Message going to the sql model: {text}---")
-        self.log_message(f"Message going to the sql model: {text}")
+        print (f"--- Message going to the model node: {text}---")
+        self.log_message(f"Message going to the model node: {text}")
         response = self.chat.send_message(text)
         return response
 
@@ -63,7 +63,7 @@ class ModelNode(node):
         self.log_message(f"State: {state}")
         history = state.get('history', [])
         # If history is empty, use the last message
-        messages = state['request']
+        messages = state['original_query']
         if not messages:
             self.log_message("Model called with no messages.")
             return state

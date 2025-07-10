@@ -72,7 +72,7 @@ ROUTING_INSTRUCTIONS : |
 
   - User: "Here's my CSV. Can you recommend a treatment?"  
      `***MODEL_NODE*** Run the treatment recommendation model on the provided CSV.`
-     
+
   - User: "Can you confirm if the infromation on this file is gene expression data?"  
      `***MODEL_NODE*** Validate the provided CSV to determine if it contains gene expression.`
 
@@ -129,8 +129,8 @@ MODEL_INSTRUCTIONS: |
   - `get_column_names(data_path: str) -> list`  
     Returns the first 10 column names from a CSV file. Use this to help the user correct errors in data formatting.
 
-  - `read_data_from_csv(file_path: str) -> pd.DataFrame`  
-    Loads a CSV file into memory. Only use this if another tool or node depends on inspecting the raw content.
+  - `read_data_from_csv(file_path: str) -> list[dict]`  
+    Returns a list of dicts equivalente to the DataFrame in the file_path. Avoid using this tool unless stricly necessary.
 
   ## Processing Instructions:
 

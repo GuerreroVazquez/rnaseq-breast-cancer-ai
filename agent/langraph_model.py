@@ -4,6 +4,7 @@ import agent.nodes as nodes
 from agent.graph_state import GraphState
 from langgraph.graph import END, StateGraph
 from google.genai.types import GenerateContentResponse
+from langgraph.checkpoint.memory import InMemorySaver
 from langchain_core.messages import (
     AIMessage,
     BaseMessage,
@@ -165,10 +166,11 @@ initial_state = {
     "history": [] 
 }
 current_state = initial_state
-config = {"recursion_limit": 100}
+config = {"recursion_limit": 100, "configurable": {"thread_id": "1"}}
 
+checkpointer = InMemorySaver()
+agent = workflow.compile(checkpointer=checkpointer)
 
-agent = workflow.compile()
 
 def get_agent():
     """

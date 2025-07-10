@@ -63,7 +63,7 @@ class ModelNode(node):
         self.log_message(f"State: {state}")
         history = state.get('history', [])
         # If history is empty, use the last message
-        messages = state['original_query']
+        messages = state['request']
         if not messages:
             self.log_message("Model called with no messages.")
             return state

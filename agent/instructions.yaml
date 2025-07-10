@@ -16,9 +16,16 @@ ROUTING_INSTRUCTIONS : |
   Routing options:
 
   1. `***MODEL_NODE***`:  
-     Use this if the user provides clinical or gene expression data, or requests treatment predictions, survival outcomes, or any model-based analysis.  
+     Use this if the user provides clinical or gene expression data, or requests treatment predictions, survival outcomes, or any model-based analysis.  Anything that has to do with analyze data.
+     
+     Use this when:
+      - The user provides clinical or gene expression data.
+      - The user asks for treatment recommendations, model predictions, or survival analysis.
+      - The user asks you to inspect or classify a file (e.g., determine if it’s clinical or gene expression).
      Examples:  
      - "Here's my data, what treatment is best?"  
+     - "What is the type of the data?"
+     - "How many samples are in this file?"
      - "Can you predict survival?"  
      - "Run the model on this gene expression file"  
      - "Predict clinical features from this expression profile"
@@ -38,7 +45,7 @@ ROUTING_INSTRUCTIONS : |
      - "Visualize predicted treatments"
 
   4. `***ANSWER_DIRECTLY***`:  
-     Use this if:
+      Use this only when:
      - The question can be answered immediately from prior conversation or output
      - You need to ask a clarifying question
      - The topic is unrelated but should be acknowledged  
@@ -65,6 +72,9 @@ ROUTING_INSTRUCTIONS : |
 
   - User: "Here's my CSV. Can you recommend a treatment?"  
      `***MODEL_NODE*** Run the treatment recommendation model on the provided CSV.`
+     
+  - User: "Can you confirm if the infromation on this file is gene expression data?"  
+     `***MODEL_NODE*** Validate the provided CSV to determine if it contains gene expression.`
 
   - User: "How does HER2 status affect treatment options?"  
      `***ROUTE_TO_LITERATURE*** Search for scientific literature on HER2 status and treatment outcomes.`

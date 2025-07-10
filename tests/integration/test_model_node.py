@@ -57,17 +57,18 @@ def test_files_accesibility() -> None:
     for file in files:
         assert os.path.exists(file), f"File {file} does not exist"
 
-def test_agent_model(monkeypatch) -> None:
+def test_agent_model_clinical(monkeypatch) -> None:
     """
     Integration test for the agent stream query functionality.
     Tests that the agent returns valid streaming responses.
     """
     input_dict = {
-        "request": AIMessage(content=" What is the survival of the people which clinical data is in path 'test/clinical_data.csv'?"),
+        "request": AIMessage(content=" What is the survival of the people which clinical data is in path 'dummy_files/clinical_data.csv'?"),
         "answer": None,
         "finished": False,
         "user_id": "test-user",
         "session_id": "test-session",
+        "original_query": "What is the survival probability of these people"
     }
     llm = "gemini-2.5-flash-preview-04-17"
     instructions  = Instructions.model.get_instruction()
@@ -78,43 +79,33 @@ def test_agent_model(monkeypatch) -> None:
     response = modelNode.get_node(state = input_dict)
     print(response)
     assert response
+    assert response.answer_source=='MODEL_NODE'
+    assert '98' in response.answer
 
 
 
-
-
-def test_agent_sql_no_model(monkeypatch) -> None:
+def test_agent_model_genetic(monkeypatch) -> None:
     """
     Integration test for the agent stream query functionality.
     Tests that the agent returns valid streaming responses.
     """
-
-    def mock_run_model_sql(*args, **kwargs):
-        fake_response = GenerateContentResponse
-        fake_response.automatic_function_calling_history= 'many functions'
-        fake_response.text = "Mir1"
-        fake_response.candidates = [Candidate(content=Content(parts=[Part]))]
-        return fake_response
-    def mock_run_model_master(*args, **kwargs):
-        fake_response = AIMessage(content="***ROUTE_TO_SQL*** Select one arbitrary microRNA ID from the database")
-        return fake_response
-    def mock_get_queries(*args, **kwargs):
-        return {"query":"select * from table"}
-    def mock_is_compleated(*args, **kwargs):
-        return {'answer': 'YES', 'return': "MiR1"}
-    monkeypatch.setattr(ModelNode, "run_model", mock_run_model_sql)
-
-
     input_dict = {
-        "messages": [
-            {"type": "human", "content":
-              "Get one microRNA from the database.\n"},
-        ],
+        "request": AIMessage(content=" What are the clinical values of the people which clinical data is in path 'dummy_files/genetic_data.csv'?"),
         "answer": None,
         "finished": False,
         "user_id": "test-user",
         "session_id": "test-session",
+        "original_query": "What is the clinical values of these people"
     }
-
-
+    llm = "gemini-2.5-flash-preview-04-17"
+    instructions  = Instructions.model.get_instruction()
+    functions = [validate_data, predict_clinical_features, predict_survival_outcome,
+                 predict_survival_outcomes, get_column_names,
+                 rename_columns, read_data_from_csv]
+    modelNode = ModelNode( llm=llm, instructions=instructions, functions=functions, welcome=None)
+    response = modelNode.get_node(state = input_dict)
+    print(response)
+    assert response
+    assert response.answer_source=='MODEL_NODE'
+    assert '98' in response.answer
 

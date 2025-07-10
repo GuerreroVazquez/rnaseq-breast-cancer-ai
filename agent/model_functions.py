@@ -46,7 +46,7 @@ def load_models_and_data():
     except Exception as e:
         raise Exception(f"Model loading failed: {e}")
 
-def validate_data(dataframe_path: str, data_type: Literal['gene_expression', 'clinical_features']) -> bool:
+def validate_data(dataframe_path: str, data_type: str) -> bool:
     """
     Validates that a CSV file has all the necessary columns for the specified data type.
 
@@ -62,6 +62,8 @@ def validate_data(dataframe_path: str, data_type: Literal['gene_expression', 'cl
     """
     global selected_genes
     data = pd.read_csv(dataframe_path)
+    if data_type not in ['gene_expression', 'clinical_features']:
+        raise ValueError("data_type must be 'gene_expression' or 'clinical_features'")
 
     if data_type == 'gene_expression':
         missing_genes = [gene for gene in selected_genes if gene not in data.columns]

@@ -1,0 +1,1969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0059)https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96058 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./GEO Accession viewer_files/jig.min.css">
+    
+    <style type="text/css">
+      a { text-decoration: none; }
+	.bordergc {background-color: #6699CC;}
+	.bordergd {background-color: #B6C7E5;}
+	.borderge {background-color: #EEF3FB;}
+	.bordergf {background-color: #FFFFFF;}
+	.bordergg {background-color: #CCCCCC;}
+      .small8b { font-size:8pt;
+                font-family: ariel,helvetica,sans-serif;
+                color:#6633cc;
+              }
+      .small8db { font-size:8pt;
+                font-family: ariel,helvetica,sans-serif;
+                color:#4411aa;
+              }
+
+    </style>
+    
+    <meta name="keywords" content="NCBI GEO Gene Expression Omnibus microarray oligonucleotide array SAGE">
+    <meta name="description" content="NCBI&#39;s Gene Expression Omnibus (GEO) is a public archive and resource for gene expression data.">
+
+<meta name="ncbi_app" content="geo">
+<meta name="ncbi_pdid" content="full">
+<meta name="ncbi_phid" content="075192F8862636910000000000000001">
+<meta name="ncbi_sessionid" content="B63700A6451F03D3_18230SID">
+
+    <title>
+    GEO Accession viewer
+    </title>
+    <link rel="stylesheet" href="./GEO Accession viewer_files/ncbi.css">
+    <!-- GEO_SCRIPT -->
+
+<script type="text/javascript" async="" src="./GEO Accession viewer_files/js"></script><script async="" src="./GEO Accession viewer_files/gtm.js" id="pingerInjectedGTM"></script><script language="JavaScript1.2" src="./GEO Accession viewer_files/imagemouseover.js"></script>
+
+<script language="JavaScript1.2" src="./GEO Accession viewer_files/show_message.js"></script>
+
+<script type="text/javascript" src="./GEO Accession viewer_files/utils.1.js"></script>
+
+<script type="text/javascript" src="./GEO Accession viewer_files/remote_data_provider.1.js"></script>
+
+<script language="JavaScript1.2" src="./GEO Accession viewer_files/help_def_messages.js"></script><script type="text/javascript" src="./GEO Accession viewer_files/js(1)"></script><script charset="utf-8" src="./GEO Accession viewer_files/8.caff23f392a4959a884f.chunk.js"></script><script charset="utf-8" src="./GEO Accession viewer_files/5.808eb39e6b6872bd9df4.chunk.js"></script><script charset="utf-8" src="./GEO Accession viewer_files/1.5379128f0f1b6aaed97d.chunk.js"></script></head><body background="./GEO Accession viewer_files/bg_main3.gif" topmargin="20" marginheight="20" id="ui-ncbiexternallink-1" data-new-gr-c-s-check-loaded="14.1241.0" data-gr-ext-installed=""><div id="viewer" style="background-color:#cccccc;marginleft:0;visibility:hidden;position:absolute;width:0;height:0;z-index:1;overflow:hidden" onmouseover="clearTimeout(RPopUpWindow_timerID)" onclick="RPopUpWindow_doNOThideFunc()" onmouseout="RPopUpWindow_Hide_Layer()"></div>
+
+<script type="text/javascript">
+    window.onload = function () {
+        jQuery.getScript("/core/alerts/alerts.js", function () {
+            galert(['#galerts_table','body > *:nth-child(1)'])
+        });
+    }
+</script>
+
+
+
+<link rel="STYLESHEET" href="./GEO Accession viewer_files/geo_style.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="./GEO Accession viewer_files/acc.css">
+  <script language="Javascript">
+
+  function OnFormFieldChange()
+  {
+    var view = document.getElementById("view");
+
+    if(document.getElementById("ViewOptions").form.value == 'html')
+    {
+        view.remove(3);
+        view.remove(2);
+    }
+    else
+    {
+        var NewOption = document.createElement("OPTION");
+
+        NewOption.text = "Full";
+        NewOption.value = "full";
+
+        try
+        {
+            view.add(NewOption, null);
+        }
+        catch(ex)
+        {
+            view.add(NewOption);
+        }
+
+        NewOption = document.createElement("OPTION");
+
+        NewOption.text = "Data";
+        NewOption.value = "data";
+
+        try
+        {
+            view.add(NewOption, null);
+        }
+        catch(ex)
+        {
+            view.add(NewOption);
+        }
+    }
+  }
+
+  function SubmitViewOptionsForm()
+  {
+	var form = document.forms.ViewOptions;
+    if(form.form.value == 'html')
+    {
+		form.form.setAttribute('disabled','disabled');
+		if (form.view.value == 'quick') {
+			form.view.setAttribute('disabled','disabled');
+		}
+		if (form.targ.value == 'self') {
+			form.targ.setAttribute('disabled','disabled');
+		}
+        var token = document.getElementById("token_input");
+        if (token) {
+            form.token.value = token.value;
+        } else {
+            form.token.setAttribute('disabled','disabled');
+        }
+        form.submit();
+    }
+    else
+    {
+        window.open("acc.cgi?acc=" + form.acc.value + "&targ=" + form.targ.value +
+                  "&form=" + form.form.value + "&view=" + form.view.value, "_self");
+    }
+
+    return false;
+  }
+  
+  function ViewOptionsFormKeyDown(event)
+  {
+	if (event == undefined)
+	{    
+		event = window.event;
+	}
+	if (event.keyCode == 13)
+	{
+		SubmitViewOptionsForm();
+		return false;
+	}
+  };
+
+  function OpenFTP(url)
+  {
+    window.open(url.replace('ftp://', 'https://'), '_blank');
+  }
+
+  function OpenLink(url, where)
+  {
+    window.open(url, where);
+  }
+
+  utils.addEvent(window, "load", OnFormFieldChange)
+  </script>
+
+
+
+
+
+<script type="text/javascript" src="./GEO Accession viewer_files/jig.min.js"></script>
+<script type="text/javascript" src="./GEO Accession viewer_files/granthubsearch.min.js"></script>
+<script type="text/javascript" src="./GEO Accession viewer_files/dd_menu.js"></script>
+	<table width="740" border="0" cellspacing="0" cellpadding="0" align="center">
+			<tbody><tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+						<tbody><tr>
+							<td><a href="https://www.ncbi.nlm.nih.gov/"><img src="./GEO Accession viewer_files/ncbi_logo.gif" alt="NCBI Logo" width="145" height="66" border="0"></a></td>
+							<td width="100%" align="center" valign="middle" nowrap="" background="./GEO Accession viewer_files/top_bg_white.gif"><img src="./GEO Accession viewer_files/pixel.gif" width="550" height="1" alt="" border="0"><br>
+								<a href="https://www.ncbi.nlm.nih.gov/geo/"><img src="./GEO Accession viewer_files/geo_main.gif" alt="GEO Logo" border="0"></a>
+							</td>
+							<td align="right" background="./GEO Accession viewer_files/top_bg_white.gif"><img src="./GEO Accession viewer_files/top_right.gif" alt="" width="5" height="66" border="0"></td>
+						</tr>
+					</tbody></table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+						<tbody><tr>
+							<td><img src="./GEO Accession viewer_files/top2_left.gif" width="601" height="2" alt="" border="0"></td>
+							<td width="100%" background="./GEO Accession viewer_files/top2_mid_bg.gif"><img src="./GEO Accession viewer_files/pixel.gif" width="1" height="1" alt="" border="0"></td>
+							<td align="right"><img src="./GEO Accession viewer_files/top2_right.gif" alt="" width="14" height="2" border="0"></td>
+						</tr>
+					</tbody></table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" id="galerts_table">
+					</table><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+						<tbody><tr>
+							<td><img src="./GEO Accession viewer_files/top3_ulm_no_a.gif" width="145" height="16" alt="" border="0" usemap="#unlmenu" name="unl_menu_pix"></td>
+							<td background="./GEO Accession viewer_files/top3_mainmenu_mid_bg.gif"><img src="./GEO Accession viewer_files/top3_mainmenu_left.gif" width="3" height="16" alt="" border="0"></td>
+							<td width="100%" valign="middle" nowrap="" background="./GEO Accession viewer_files/top3_mainmenu_mid_bg.gif">
+
+					<!-- GEO Navigation -->
+			<ul id="geo_nav_bar">
+				<li><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96058#">GEO Publications</a>
+					<ul class="sublist">
+						<li><a href="https://www.ncbi.nlm.nih.gov/geo/info/GEOHandoutFinal.pdf">Handout</a></li>
+                        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10767856/">NAR 2024 (latest)</a></li>
+						<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC99122/">NAR 2002 (original)</a></li>
+						<li><a href="https://www.ncbi.nlm.nih.gov/pmc/?term=10767856,4944384,3531084,3341798,3013736,2686538,2270403,1669752,1619900,1619899,539976,99122">All publications</a></li>
+					</ul>
+				</li>
+				<li><a href="https://www.ncbi.nlm.nih.gov/geo/info/faq.html">FAQ</a></li>
+				<li><a href="https://www.ncbi.nlm.nih.gov/geo/info/MIAME.html" title="Minimum Information About a Microarray Experiment">MIAME</a></li>
+				<li><a href="mailto:geo@ncbi.nlm.nih.gov">Email GEO</a></li>
+			</ul>
+			<!-- END GEO Navigation -->
+
+                    </td>
+                    <td background="./GEO Accession viewer_files/top3_mainmenu_mid_bg.gif" align="right"><img src="./GEO Accession viewer_files/top3_mainmenu_right.gif" width="5" height="16" alt="" border="0"></td>
+                </tr>
+            </tbody></table>
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                <tbody><tr>
+                    <td><img src="./GEO Accession viewer_files/top4_ulm_left.gif" width="145" height="4" alt="" border="0"></td>
+                    <td width="100%" background="./GEO Accession viewer_files/top4_mid_bg.gif"><img src="./GEO Accession viewer_files/pixel.gif" width="1" height="1" alt="" border="0"></td>
+                    <td align="right" background="./GEO Accession viewer_files/top4_mid_bg.gif"><img src="./GEO Accession viewer_files/top4_ulm_right.gif" width="5" height="4" alt="" border="0"></td>
+                </tr>
+            </tbody></table>
+    
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                <tbody><tr>
+                    <td width="1" background="./GEO Accession viewer_files/main_left_bg.gif"><img src="./GEO Accession viewer_files/main_left_bg.gif" alt="" width="4" height="3" border="0"></td>
+                    <td width="10000" bgcolor="#F0F8FF">
+                        <table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><font class="Top_Navigation_text" color="#2F6E87" face="Verdana" size="+1">&nbsp;&nbsp;&nbsp;<a href="https://www.ncbi.nlm.nih.gov/">NCBI</a> &gt; <a href="https://www.ncbi.nlm.nih.gov/geo"><font color="">GEO</font></a> &gt; <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi"><b>Accession Display</b></a><a href="javascript:RPopUpWindow_Set(geologinbar_location,260,120,&#39;&#39;,&#39;&#39;,&#39;#E1EAE6&#39;,&#39;&#39;,&#39;#538AA9&#39;,&#39;MessageBox2&#39;);" onmouseout="RPopUpWindow_Stop()"><img alt="Help" height="11" src="./GEO Accession viewer_files/long_help4.gif" style="border: none" width="19"></a></font></td>
+<td align="right">Not logged in | <a href="https://www.ncbi.nlm.nih.gov/geo/submitter?ix=1re6xm7YMft7v6hcJvUp_FxwI0OZFkJejzq0lqJVybOWxKqLZwNLl-qPzsu4R4vvfQye_BXAasEw-rDnI5J">Login</a><a href="javascript:RPopUpWindow_Set(geologinbar_login,260,200,&#39;&#39;,&#39;&#39;,&#39;#E1EAE6&#39;,&#39;&#39;,&#39;#538AA9&#39;,&#39;MessageBox2&#39;);" onmouseout="RPopUpWindow_Stop()"><img alt="Help" height="11" src="./GEO Accession viewer_files/long_help4.gif" style="border: none" width="19"></a></td>
+</tr></tbody></table>
+                    </td>
+                    <td width="1" background="./GEO Accession viewer_files/main_right_bg.gif"><img src="./GEO Accession viewer_files/main_right_bg.gif" width="4" height="3" alt="" border="0"></td>
+                </tr>
+                <tr>
+                    <td background="./GEO Accession viewer_files/main_left_bg.gif"><img src="./GEO Accession viewer_files/main_left_bg.gif" width="4" height="1" alt="" border="0"></td>
+                    <td width="10000" bgcolor="#E0EEEE"><img src="./GEO Accession viewer_files/pixel.gif" width="1" height="1" alt="" border="0"></td>
+                    <td align="right" background="./GEO Accession viewer_files/main_right_bg.gif"><img src="./GEO Accession viewer_files/main_right_bg.gif" alt="" width="4" height="1" border="0"></td>
+                </tr>
+
+                <tr>
+                    <td background="./GEO Accession viewer_files/main_left_bg.gif"><img src="./GEO Accession viewer_files/main_left_bg.gif" width="4" height="3" alt="" border="0"></td>
+                    <td width="100%" bgcolor="White">
+                        <table width="98%" border="0" align="center">
+                            <tbody><tr>
+                                <td>
+                                    <table border="0" cellspacing="0" cellpadding="0" align="right" width="100%">
+                                        <tbody><tr>
+                                            <td>
+
+ <script type="text/javascript" src="./GEO Accession viewer_files/acc.js"></script>
+ <span id="msg_err" style="color:red"></span>
+ <span id="msg_info" style="color:blue"></span>
+<table cellpadding="0" cellspacing="0" style="border: 1px solid #C0F8FF"><tbody><tr><td><img alt=" " height="35" src="./GEO Accession viewer_files/pixel.gif" width="1"></td>
+<td bgcolor="#F0F8FF" width="100%"><font color="#0066CC" face="Arial" size="1"><div id="HelpMessage" style="font: 11px/11px arial, sans-serif">&nbsp;</div></font></td>
+</tr></tbody></table>
+<form action="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi" enctype="application/x-www-form-urlencoded" id="ViewOptions" method="POST" name="ViewOptions" target="_self"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td></td>
+<td bgcolor="#CCCCCC" nowrap="" valign="middle" width="100%"><table align="left" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td nowrap=""><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="middle"><input id="token" name="token" type="hidden" value=""><label for="scope">Scope: </label><select id="scope" name="targ" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_scope)" style="font-size: 10px"><option selected="" value="self">Self</option>
+<option value="gpl">Platform</option>
+<option value="gsm">Samples</option>
+<option value="gse">Series</option>
+<option value="all">Family</option>
+</select>
+&nbsp;&nbsp;<label for="form">Format: </label><select id="form" name="form" onchange="OnFormFieldChange()" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_format)" style="font-size: 10px"><option value="html">HTML</option>
+<option value="text">SOFT</option>
+<option value="xml">MINiML</option>
+</select>
+&nbsp;&nbsp;<label for="view">Amount: </label><select id="view" name="view" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_amount)" style="font-size: 10px"><option value="brief">Brief</option>
+<option selected="" value="quick">Quick</option>
+</select>
+&nbsp;<label for="geo_acc">GEO accession: </label><input id="geo_acc" name="acc" onkeydown="ViewOptionsFormKeyDown(event)" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_acc)" style="font-size: 10px" type="text" value="GSE96058">&nbsp;&nbsp;</td>
+<td valign="middle"><img alt="Go" border="0" onclick="SubmitViewOptionsForm()" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_go)" src="./GEO Accession viewer_files/go_button.gif"></td>
+</tr></tbody></table></td></tr></tbody></table></td>
+</tr></tbody></table></form>
+    <table><tbody><tr><td><table cellpadding="2" cellspacing="0" width="600"><tbody><tr bgcolor="#cccccc" valign="top"><td colspan="2"><table width="600"><tbody><tr><td><strong class="acc" id="GSE96058"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96058" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">Series GSE96058</a></strong></td>
+<td></td>
+<td align="right" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_gds)"><a href="https://www.ncbi.nlm.nih.gov/gds/?term=GSE96058[Accession]">Query DataSets for GSE96058</a></td>
+</tr></tbody></table></td></tr>
+<tr valign="top"><td>Status</td>
+<td>Public on Mar 12, 2018</td>
+</tr>
+<tr valign="top"><td nowrap="">Title</td>
+<td style="text-align: justify">Clinical Value of RNA Sequencing–Based Classifiers for Prediction of the Five Conventional Breast Cancer Biomarkers: A Report From the Population-Based Multicenter Sweden Cancerome Analysis Network—Breast Initiative [cohort 3273]</td>
+</tr>
+<tr valign="top"><td nowrap="">Organism</td>
+<td><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&amp;id=9606" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_organismus)">Homo sapiens</a></td>
+</tr>
+<tr valign="top"><td nowrap="">Experiment type</td>
+<td>Expression profiling by high throughput sequencing<br></td>
+</tr>
+<tr valign="top"><td nowrap="">Summary</td>
+<td style="text-align: justify">PURPOSE<br>In early breast cancer (BC), five conventional biomarkers—estrogen receptor (ER), progesterone receptor (PgR), human epidermal growth factor receptor 2 (HER2), Ki67, and Nottingham histologic grade (NHG)—are used to determine prognosis and treatment. We aimed to develop classifiers for these biomarkers that were based on tumor mRNA sequencing (RNA-seq), compare classification performance, and test whether such predictors could add value for risk stratification.<br><br>METHODS<br>In total, 3,678 patients with BC were studied. For 405 tumors, a comprehensive multi-rater histopathologic evaluation was performed. Using RNA-seq data, single-gene classifiers and multigene classifiers (MGCs) were trained on consensus histopathology labels. Trained classifiers were tested on a prospective population-based series of 3,273 BCs that included a median follow-up of 52 months (Sweden Cancerome Analysis Network—Breast [SCAN-B], ClinicalTrials.gov identifier: NCT02306096), and results were evaluated by agreement statistics and Kaplan-Meier and Cox survival analyses.<br><br>RESULTS<br>Pathologist concordance was high for ER, PgR, and HER2 (average κ, 0.920, 0.891, and 0.899, respectively) but moderate for Ki67 and NHG (average κ, 0.734 and 0.581). Concordance between RNA-seq classifiers and histopathology for the independent cohort of 3,273 was similar to interpathologist concordance. Patients with discordant classifications, predicted as hormone responsive by histopathology but non–hormone responsive by MGC, had significantly inferior overall survival compared with patients who had concordant results. This extended to patients who received no adjuvant therapy (hazard ratio [HR], 3.19; 95% CI, 1.19 to 8.57), or endocrine therapy alone (HR, 2.64; 95% CI, 1.55 to 4.51). For cases identified as hormone responsive by histopathology and who received endocrine therapy alone, the MGC hormone-responsive classifier remained significant after multivariable adjustment (HR, 2.45; 95% CI, 1.39 to 4.34).<br><br>CONCLUSION<br>Classification error rates for RNA-seq–based classifiers for the five key BC biomarkers generally were equivalent to conventional histopathology. However, RNA-seq classifiers provided added clinical value in particular for tumors determined by histopathology to be hormone responsive but by RNA-seq to be hormone insensitive.<br></td>
+</tr>
+<tr valign="top"><td nowrap="">&nbsp;</td>
+<td></td>
+</tr>
+<tr valign="top"><td nowrap="">Overall design</td>
+<td style="text-align: justify">Illumina paired-end RNA-sequencing and expression estimation were performed for two cohorts: a training cohort with 405 samples (GSE81538), and a validation cohort with 3273 samples (of which 136 cases have technical replicates) (GSE96058).  A comprehensive histopathological evaluation was performed on the 405-cohort to estimate inter-pathologist variability on original diagnostic slides as well as on repeat immunostains, leading to consensus scores for five clinical biomarkers.  Subtyping was performed using the PAM50 gene list.<br><br>Please note that there are "primary sample" (e.g F30) and "technical replicate" (e.g. F30repl) of the same BioSample.  The technical replicates in herein are primarily newly constructed and sequenced libraries from the same RNA extraction as the primary sample, with the remaining replicates being re-sequencings of the same library as the respective primary sample.<br><br>Due to the patient consent, Swedish law, the potential that the sequencing data contains personally-identifiable information and hereditary mutations, and the right to privacy, the submitter cannot make available the raw sequence data in a public repository.<br></td>
+</tr>
+<tr valign="top"><td nowrap="">&nbsp;</td>
+<td></td>
+</tr>
+<tr valign="top"><td>Contributor(s)</td>
+<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Brueffer%20C[Author]">Brueffer C</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Vallon-Christersson%20J[Author]">Vallon-Christersson J</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Grabau%20D[Author]">Grabau D</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Ehinger%20A[Author]">Ehinger A</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=H%C3%A4kkinen%20J[Author]">Häkkinen J</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Hegardt%20C[Author]">Hegardt C</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Malina%20J[Author]">Malina J</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Chen%20Y[Author]">Chen Y</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Bendahl%20P[Author]">Bendahl P</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Manjer%20J[Author]">Manjer J</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Malmberg%20M[Author]">Malmberg M</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Larsson%20C[Author]">Larsson C</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Loman%20N[Author]">Loman N</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Ryd%C3%A9n%20L[Author]">Rydén L</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Borg%20%C3%85[Author]">Borg Å</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Saal%20LH[Author]">Saal LH</a></td>
+</tr>
+<tr valign="top"><td nowrap="">Citation(s)</td>
+<td><span class="pubmed_id" id="32913985,32926574,33937624,35304506"><!--?xml version="1.0" encoding="UTF-8"?-->
+<div class="PubmedCitation"><ul><li><span class="authors">Brueffer C, Vallon-Christersson J, Grabau D, Ehinger A et al. </span><span class="title">Clinical Value of RNA Sequencing-Based Classifiers for Prediction of the Five Conventional Breast Cancer Biomarkers: A Report From the Population-Based Multicenter Sweden Cancerome Analysis Network-Breast Initiative. </span><span class="source">JCO Precis Oncol</span> 2018;2. PMID:&nbsp;<a title="Link to PubMed record" href="https://www.ncbi.nlm.nih.gov/pubmed/32913985">32913985</a></li><li><span class="authors">Brueffer C, Gladchuk S, Winter C, Vallon-Christersson J et al. </span><span class="title">The mutational landscape of the SCAN-B real-world primary breast cancer transcriptome. </span><span class="source">EMBO Mol Med</span> 2020 Oct 7;12(10):e12118. PMID:&nbsp;<a title="Link to PubMed record" href="https://www.ncbi.nlm.nih.gov/pubmed/32926574">32926574</a></li><li><span class="authors">Dahlgren M, George AM, Brueffer C, Gladchuk S et al. </span><span class="title">Preexisting Somatic Mutations of Estrogen Receptor Alpha (ESR1) in Early-Stage Primary Breast Cancer. </span><span class="source">JNCI Cancer Spectr</span> 2021 Apr;5(2). PMID:&nbsp;<a title="Link to PubMed record" href="https://www.ncbi.nlm.nih.gov/pubmed/33937624">33937624</a></li><li><span class="authors">Dalal H, Dahlgren M, Gladchuk S, Brueffer C et al. </span><span class="title">Clinical associations of ESR2 (estrogen receptor beta) expression across thousands of primary breast tumors. </span><span class="source">Sci Rep</span> 2022 Mar 18;12(1):4696. PMID:&nbsp;<a title="Link to PubMed record" href="https://www.ncbi.nlm.nih.gov/pubmed/35304506">35304506</a></li></ul></div>
+</span></td>
+</tr>
+<tr valign="top"><td nowrap=""></td>
+<td style="text-align: justify">Christian Brueffer, Johan Vallon-Christersson, Dorthe Grabau, Anna Ehinger, Jari Häkkinen, Cecilia Hegardt, Janne Malina, Yilun Chen, Pär-Ola Bendahl, Jonas Manjer, Martin Malmberg, Christer Larsson, Niklas Loman, Lisa Rydén, Åke Borg, and Lao H. Saal. Clinical Value of RNA Sequencing-Based Classifiers for Prediction of the Five Conventional Breast Cancer Biomarkers: A Report From the Population-Based Multicenter Sweden Cancerome Analysis Network—Breast Initiative. JCO Precision Oncology 2018;2:1-18. DOI: 10.1200/PO.17.00135<br></td>
+</tr>
+<tr valign="top"><td colspan="2"><span id="geo2r"></span> <span id="rnaseq_counts"></span></td></tr>
+<tr bgcolor="#eeeeee" valign="top"><td>Submission date</td>
+<td>Mar 09, 2017</td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td>Last update date</td>
+<td>May 04, 2022</td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td>Contact name</td>
+<td>Lao H Saal</td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">E-mail(s)</td>
+<td><a href="mailto:lao.saal@med.lu.se">lao.saal@med.lu.se</a><br></td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">Organization name</td>
+<td style="text-align: justify">Lund University<br></td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">Department</td>
+<td style="text-align: justify">Department of Oncology and Pathology<br></td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">Lab</td>
+<td style="text-align: justify">Translational Oncogenomics Unit<br></td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">Street address</td>
+<td style="text-align: justify">Scheelevägen 2, MV404B2<br></td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">City</td>
+<td style="text-align: justify">Lund</td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">ZIP/Postal code</td>
+<td style="text-align: justify">22391</td>
+</tr>
+<tr bgcolor="#eeeeee" valign="top"><td nowrap="">Country</td>
+<td style="text-align: justify">Sweden</td>
+</tr>
+<tr valign="top"><td nowrap="">&nbsp;</td>
+<td></td>
+</tr>
+<tr valign="top"><td>Platforms (2)</td>
+<td onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)"><table cellpadding="3" style="position:relative;top:-5px;left:-5px"><tbody><tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL11154" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GPL11154</a></td>
+<td valign="top">Illumina HiSeq 2000 (Homo sapiens)</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL18573" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GPL18573</a></td>
+<td valign="top">Illumina NextSeq 500 (Homo sapiens)</td>
+</tr>
+</tbody></table></td>
+</tr>
+<tr valign="top"><td>Samples (3409)<div id="L456940027divshown" name="L456940027divshown" style="display: none"><a href="javascript:HandleVisibilityChangeL456940027()"><img alt="Less..." border="0" src="./GEO Accession viewer_files/minus_close.gif">&nbsp;Less...</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div id="L456940027divhidden" name="L456940027divhidden" style="display: block"><a href="javascript:HandleVisibilityChangeL456940027()"><img alt="More..." border="0" src="./GEO Accession viewer_files/plus_small.gif">&nbsp;More...</a></div>
+</td>
+<td onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)"><table cellpadding="3" style="position:relative;top:-5px;left:-5px"><tbody><tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528079" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528079</a></td>
+<td valign="top">F1</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528080" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528080</a></td>
+<td valign="top">F2</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528081" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528081</a></td>
+<td valign="top">F3</td>
+</tr>
+</tbody></table>
+<script language="Javascript" type="text/javascript">
+<!--
+function HandleVisibilityChangeL456940027(){if(document.getElementById("L456940027div").style.display == "block"){document.getElementById("L456940027div").style.display = "none";document.getElementById("L456940027divhidden").style.display = "block";document.getElementById("L456940027divshown").style.display = "none";}else{document.getElementById("L456940027div").style.display = "block";document.getElementById("L456940027divhidden").style.display = "none";document.getElementById("L456940027divshown").style.display = "block";}}
+-->
+</script>
+<div id="L456940027div" name="L456940027div" style="display: none"><table cellpadding="3" style="position:relative;top:-5px;left:-5px"><tbody><tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528082" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528082</a></td>
+<td valign="top">F4</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528083" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528083</a></td>
+<td valign="top">F5</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528084" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528084</a></td>
+<td valign="top">F6</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528085" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528085</a></td>
+<td valign="top">F7</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528086" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528086</a></td>
+<td valign="top">F8</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528087" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528087</a></td>
+<td valign="top">F9</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528088" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528088</a></td>
+<td valign="top">F10</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528089" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528089</a></td>
+<td valign="top">F11</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528090" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528090</a></td>
+<td valign="top">F12</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528091" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528091</a></td>
+<td valign="top">F13</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528092" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528092</a></td>
+<td valign="top">F14</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528093" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528093</a></td>
+<td valign="top">F15</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528094" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528094</a></td>
+<td valign="top">F16</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528095" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528095</a></td>
+<td valign="top">F17</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528096" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528096</a></td>
+<td valign="top">F18</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528097" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528097</a></td>
+<td valign="top">F19</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528098" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528098</a></td>
+<td valign="top">F20</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528099" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528099</a></td>
+<td valign="top">F21</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528100" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528100</a></td>
+<td valign="top">F22</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528101" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528101</a></td>
+<td valign="top">F23</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528102" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528102</a></td>
+<td valign="top">F24</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528103" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528103</a></td>
+<td valign="top">F25</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528104" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528104</a></td>
+<td valign="top">F26</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528105" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528105</a></td>
+<td valign="top">F27</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528106" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528106</a></td>
+<td valign="top">F28</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528107" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528107</a></td>
+<td valign="top">F29</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528108" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528108</a></td>
+<td valign="top">F30</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528109" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528109</a></td>
+<td valign="top">F31</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528110" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528110</a></td>
+<td valign="top">F32</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528111" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528111</a></td>
+<td valign="top">F33</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528112" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528112</a></td>
+<td valign="top">F34</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528113" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528113</a></td>
+<td valign="top">F35</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528114" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528114</a></td>
+<td valign="top">F36</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528115" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528115</a></td>
+<td valign="top">F37</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528116" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528116</a></td>
+<td valign="top">F38</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528117" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528117</a></td>
+<td valign="top">F39</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528118" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528118</a></td>
+<td valign="top">F40</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528119" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528119</a></td>
+<td valign="top">F41</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528120" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528120</a></td>
+<td valign="top">F42</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528121" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528121</a></td>
+<td valign="top">F43</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528122" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528122</a></td>
+<td valign="top">F44</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528123" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528123</a></td>
+<td valign="top">F45</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528124" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528124</a></td>
+<td valign="top">F46</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528125" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528125</a></td>
+<td valign="top">F47</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528126" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528126</a></td>
+<td valign="top">F48</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528127" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528127</a></td>
+<td valign="top">F49</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528128" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528128</a></td>
+<td valign="top">F50</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528129" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528129</a></td>
+<td valign="top">F51</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528130" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528130</a></td>
+<td valign="top">F52</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528131" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528131</a></td>
+<td valign="top">F53</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528132" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528132</a></td>
+<td valign="top">F54</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528133" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528133</a></td>
+<td valign="top">F55</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528134" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528134</a></td>
+<td valign="top">F56</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528135" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528135</a></td>
+<td valign="top">F57</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528136" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528136</a></td>
+<td valign="top">F58</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528137" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528137</a></td>
+<td valign="top">F59</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528138" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528138</a></td>
+<td valign="top">F60</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528139" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528139</a></td>
+<td valign="top">F61</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528140" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528140</a></td>
+<td valign="top">F62</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528141" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528141</a></td>
+<td valign="top">F63</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528142" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528142</a></td>
+<td valign="top">F64</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528143" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528143</a></td>
+<td valign="top">F65</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528144" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528144</a></td>
+<td valign="top">F66</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528145" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528145</a></td>
+<td valign="top">F67</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528146" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528146</a></td>
+<td valign="top">F68</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528147" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528147</a></td>
+<td valign="top">F69</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528148" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528148</a></td>
+<td valign="top">F70</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528149" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528149</a></td>
+<td valign="top">F71</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528150" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528150</a></td>
+<td valign="top">F72</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528151" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528151</a></td>
+<td valign="top">F73</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528152" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528152</a></td>
+<td valign="top">F74</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528153" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528153</a></td>
+<td valign="top">F75</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528154" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528154</a></td>
+<td valign="top">F76</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528155" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528155</a></td>
+<td valign="top">F77</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528156" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528156</a></td>
+<td valign="top">F78</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528157" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528157</a></td>
+<td valign="top">F79</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528158" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528158</a></td>
+<td valign="top">F80</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528159" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528159</a></td>
+<td valign="top">F81</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528160" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528160</a></td>
+<td valign="top">F82</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528161" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528161</a></td>
+<td valign="top">F83</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528162" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528162</a></td>
+<td valign="top">F84</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528163" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528163</a></td>
+<td valign="top">F85</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528164" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528164</a></td>
+<td valign="top">F86</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528165" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528165</a></td>
+<td valign="top">F87</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528166" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528166</a></td>
+<td valign="top">F88</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528167" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528167</a></td>
+<td valign="top">F89</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528168" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528168</a></td>
+<td valign="top">F90</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528169" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528169</a></td>
+<td valign="top">F91</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528170" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528170</a></td>
+<td valign="top">F92</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528171" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528171</a></td>
+<td valign="top">F93</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528172" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528172</a></td>
+<td valign="top">F94</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528173" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528173</a></td>
+<td valign="top">F95</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528174" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528174</a></td>
+<td valign="top">F96</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528175" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528175</a></td>
+<td valign="top">F97</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528176" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528176</a></td>
+<td valign="top">F98</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528177" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528177</a></td>
+<td valign="top">F99</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528178" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528178</a></td>
+<td valign="top">F100</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528179" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528179</a></td>
+<td valign="top">F101</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528180" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528180</a></td>
+<td valign="top">F102</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528181" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528181</a></td>
+<td valign="top">F103</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528182" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528182</a></td>
+<td valign="top">F104</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528183" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528183</a></td>
+<td valign="top">F105</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528184" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528184</a></td>
+<td valign="top">F106</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528185" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528185</a></td>
+<td valign="top">F107</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528186" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528186</a></td>
+<td valign="top">F108</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528187" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528187</a></td>
+<td valign="top">F109</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528188" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528188</a></td>
+<td valign="top">F110</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528189" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528189</a></td>
+<td valign="top">F111</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528190" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528190</a></td>
+<td valign="top">F112</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528191" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528191</a></td>
+<td valign="top">F113</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528192" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528192</a></td>
+<td valign="top">F114</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528193" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528193</a></td>
+<td valign="top">F115</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528194" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528194</a></td>
+<td valign="top">F116</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528195" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528195</a></td>
+<td valign="top">F117</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528196" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528196</a></td>
+<td valign="top">F118</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528197" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528197</a></td>
+<td valign="top">F119</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528198" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528198</a></td>
+<td valign="top">F120</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528199" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528199</a></td>
+<td valign="top">F121</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528200" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528200</a></td>
+<td valign="top">F122</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528201" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528201</a></td>
+<td valign="top">F123</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528202" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528202</a></td>
+<td valign="top">F124</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528203" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528203</a></td>
+<td valign="top">F125</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528204" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528204</a></td>
+<td valign="top">F126</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528205" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528205</a></td>
+<td valign="top">F127</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528206" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528206</a></td>
+<td valign="top">F128</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528207" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528207</a></td>
+<td valign="top">F129</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528208" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528208</a></td>
+<td valign="top">F130</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528209" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528209</a></td>
+<td valign="top">F131</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528210" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528210</a></td>
+<td valign="top">F132</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528211" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528211</a></td>
+<td valign="top">F133</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528212" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528212</a></td>
+<td valign="top">F134</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528213" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528213</a></td>
+<td valign="top">F135</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528214" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528214</a></td>
+<td valign="top">F136</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528215" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528215</a></td>
+<td valign="top">F137</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528216" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528216</a></td>
+<td valign="top">F138</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528217" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528217</a></td>
+<td valign="top">F139</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528218" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528218</a></td>
+<td valign="top">F140</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528219" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528219</a></td>
+<td valign="top">F141</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528220" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528220</a></td>
+<td valign="top">F142</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528221" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528221</a></td>
+<td valign="top">F143</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528222" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528222</a></td>
+<td valign="top">F144</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528223" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528223</a></td>
+<td valign="top">F145</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528224" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528224</a></td>
+<td valign="top">F146</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528225" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528225</a></td>
+<td valign="top">F147</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528226" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528226</a></td>
+<td valign="top">F148</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528227" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528227</a></td>
+<td valign="top">F149</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528228" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528228</a></td>
+<td valign="top">F150</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528229" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528229</a></td>
+<td valign="top">F151</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528230" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528230</a></td>
+<td valign="top">F152</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528231" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528231</a></td>
+<td valign="top">F153</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528232" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528232</a></td>
+<td valign="top">F154</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528233" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528233</a></td>
+<td valign="top">F155</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528234" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528234</a></td>
+<td valign="top">F156</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528235" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528235</a></td>
+<td valign="top">F157</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528236" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528236</a></td>
+<td valign="top">F158</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528237" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528237</a></td>
+<td valign="top">F159</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528238" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528238</a></td>
+<td valign="top">F160</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528239" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528239</a></td>
+<td valign="top">F161</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528240" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528240</a></td>
+<td valign="top">F162</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528241" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528241</a></td>
+<td valign="top">F163</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528242" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528242</a></td>
+<td valign="top">F164</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528243" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528243</a></td>
+<td valign="top">F165</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528244" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528244</a></td>
+<td valign="top">F166</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528245" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528245</a></td>
+<td valign="top">F167</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528246" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528246</a></td>
+<td valign="top">F168</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528247" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528247</a></td>
+<td valign="top">F169</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528248" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528248</a></td>
+<td valign="top">F170</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528249" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528249</a></td>
+<td valign="top">F171</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528250" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528250</a></td>
+<td valign="top">F172</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528251" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528251</a></td>
+<td valign="top">F173</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528252" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528252</a></td>
+<td valign="top">F174</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528253" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528253</a></td>
+<td valign="top">F175</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528254" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528254</a></td>
+<td valign="top">F176</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528255" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528255</a></td>
+<td valign="top">F177</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528256" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528256</a></td>
+<td valign="top">F178</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528257" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528257</a></td>
+<td valign="top">F179</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528258" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528258</a></td>
+<td valign="top">F180</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528259" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528259</a></td>
+<td valign="top">F181</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528260" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528260</a></td>
+<td valign="top">F182</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528261" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528261</a></td>
+<td valign="top">F183</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528262" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528262</a></td>
+<td valign="top">F184</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528263" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528263</a></td>
+<td valign="top">F185</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528264" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528264</a></td>
+<td valign="top">F186</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528265" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528265</a></td>
+<td valign="top">F187</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528266" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528266</a></td>
+<td valign="top">F188</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528267" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528267</a></td>
+<td valign="top">F189</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528268" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528268</a></td>
+<td valign="top">F190</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528269" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528269</a></td>
+<td valign="top">F191</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528270" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528270</a></td>
+<td valign="top">F192</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528271" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528271</a></td>
+<td valign="top">F193</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528272" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528272</a></td>
+<td valign="top">F194</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528273" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528273</a></td>
+<td valign="top">F195</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528274" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528274</a></td>
+<td valign="top">F196</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528275" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528275</a></td>
+<td valign="top">F197</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528276" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528276</a></td>
+<td valign="top">F198</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528277" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528277</a></td>
+<td valign="top">F199</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528278" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528278</a></td>
+<td valign="top">F200</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528279" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528279</a></td>
+<td valign="top">F201</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528280" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528280</a></td>
+<td valign="top">F202</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528281" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528281</a></td>
+<td valign="top">F203</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528282" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528282</a></td>
+<td valign="top">F204</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528283" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528283</a></td>
+<td valign="top">F205</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528284" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528284</a></td>
+<td valign="top">F206</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528285" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528285</a></td>
+<td valign="top">F207</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528286" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528286</a></td>
+<td valign="top">F208</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528287" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528287</a></td>
+<td valign="top">F209</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528288" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528288</a></td>
+<td valign="top">F210</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528289" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528289</a></td>
+<td valign="top">F211</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528290" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528290</a></td>
+<td valign="top">F212</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528291" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528291</a></td>
+<td valign="top">F213</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528292" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528292</a></td>
+<td valign="top">F214</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528293" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528293</a></td>
+<td valign="top">F215</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528294" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528294</a></td>
+<td valign="top">F216</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528295" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528295</a></td>
+<td valign="top">F217</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528296" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528296</a></td>
+<td valign="top">F218</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528297" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528297</a></td>
+<td valign="top">F219</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528298" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528298</a></td>
+<td valign="top">F220</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528299" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528299</a></td>
+<td valign="top">F221</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528300" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528300</a></td>
+<td valign="top">F222</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528301" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528301</a></td>
+<td valign="top">F223</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528302" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528302</a></td>
+<td valign="top">F224</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528303" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528303</a></td>
+<td valign="top">F225</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528304" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528304</a></td>
+<td valign="top">F226</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528305" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528305</a></td>
+<td valign="top">F227</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528306" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528306</a></td>
+<td valign="top">F228</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528307" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528307</a></td>
+<td valign="top">F229</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528308" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528308</a></td>
+<td valign="top">F230</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528309" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528309</a></td>
+<td valign="top">F231</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528310" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528310</a></td>
+<td valign="top">F232</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528311" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528311</a></td>
+<td valign="top">F233</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528312" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528312</a></td>
+<td valign="top">F234</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528313" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528313</a></td>
+<td valign="top">F235</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528314" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528314</a></td>
+<td valign="top">F236</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528315" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528315</a></td>
+<td valign="top">F237</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528316" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528316</a></td>
+<td valign="top">F238</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528317" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528317</a></td>
+<td valign="top">F239</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528318" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528318</a></td>
+<td valign="top">F240</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528319" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528319</a></td>
+<td valign="top">F241</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528320" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528320</a></td>
+<td valign="top">F242</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528321" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528321</a></td>
+<td valign="top">F243</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528322" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528322</a></td>
+<td valign="top">F244</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528323" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528323</a></td>
+<td valign="top">F245</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528324" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528324</a></td>
+<td valign="top">F246</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528325" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528325</a></td>
+<td valign="top">F247</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528326" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528326</a></td>
+<td valign="top">F248</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528327" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528327</a></td>
+<td valign="top">F249</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528328" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528328</a></td>
+<td valign="top">F250</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528329" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528329</a></td>
+<td valign="top">F251</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528330" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528330</a></td>
+<td valign="top">F252</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528331" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528331</a></td>
+<td valign="top">F253</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528332" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528332</a></td>
+<td valign="top">F254</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528333" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528333</a></td>
+<td valign="top">F255</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528334" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528334</a></td>
+<td valign="top">F256</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528335" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528335</a></td>
+<td valign="top">F257</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528336" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528336</a></td>
+<td valign="top">F258</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528337" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528337</a></td>
+<td valign="top">F259</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528338" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528338</a></td>
+<td valign="top">F260</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528339" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528339</a></td>
+<td valign="top">F261</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528340" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528340</a></td>
+<td valign="top">F262</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528341" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528341</a></td>
+<td valign="top">F263</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528342" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528342</a></td>
+<td valign="top">F264</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528343" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528343</a></td>
+<td valign="top">F265</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528344" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528344</a></td>
+<td valign="top">F266</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528345" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528345</a></td>
+<td valign="top">F267</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528346" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528346</a></td>
+<td valign="top">F268</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528347" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528347</a></td>
+<td valign="top">F269</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528348" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528348</a></td>
+<td valign="top">F270</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528349" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528349</a></td>
+<td valign="top">F271</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528350" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528350</a></td>
+<td valign="top">F272</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528351" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528351</a></td>
+<td valign="top">F273</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528352" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528352</a></td>
+<td valign="top">F274</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528353" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528353</a></td>
+<td valign="top">F275</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528354" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528354</a></td>
+<td valign="top">F276</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528355" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528355</a></td>
+<td valign="top">F277</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528356" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528356</a></td>
+<td valign="top">F278</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528357" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528357</a></td>
+<td valign="top">F279</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528358" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528358</a></td>
+<td valign="top">F280</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528359" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528359</a></td>
+<td valign="top">F281</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528360" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528360</a></td>
+<td valign="top">F282</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528361" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528361</a></td>
+<td valign="top">F283</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528362" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528362</a></td>
+<td valign="top">F284</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528363" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528363</a></td>
+<td valign="top">F285</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528364" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528364</a></td>
+<td valign="top">F286</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528365" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528365</a></td>
+<td valign="top">F287</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528366" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528366</a></td>
+<td valign="top">F288</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528367" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528367</a></td>
+<td valign="top">F289</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528368" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528368</a></td>
+<td valign="top">F290</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528369" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528369</a></td>
+<td valign="top">F291</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528370" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528370</a></td>
+<td valign="top">F292</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528371" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528371</a></td>
+<td valign="top">F293</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528372" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528372</a></td>
+<td valign="top">F294</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528373" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528373</a></td>
+<td valign="top">F295</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528374" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528374</a></td>
+<td valign="top">F296</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528375" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528375</a></td>
+<td valign="top">F297</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528376" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528376</a></td>
+<td valign="top">F298</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528377" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528377</a></td>
+<td valign="top">F299</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528378" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528378</a></td>
+<td valign="top">F300</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528379" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528379</a></td>
+<td valign="top">F301</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528380" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528380</a></td>
+<td valign="top">F302</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528381" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528381</a></td>
+<td valign="top">F303</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528382" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528382</a></td>
+<td valign="top">F304</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528383" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528383</a></td>
+<td valign="top">F305</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528384" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528384</a></td>
+<td valign="top">F306</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528385" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528385</a></td>
+<td valign="top">F307</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528386" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528386</a></td>
+<td valign="top">F308</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528387" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528387</a></td>
+<td valign="top">F309</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528388" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528388</a></td>
+<td valign="top">F310</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528389" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528389</a></td>
+<td valign="top">F311</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528390" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528390</a></td>
+<td valign="top">F312</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528391" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528391</a></td>
+<td valign="top">F313</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528392" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528392</a></td>
+<td valign="top">F314</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528393" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528393</a></td>
+<td valign="top">F315</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528394" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528394</a></td>
+<td valign="top">F316</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528395" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528395</a></td>
+<td valign="top">F317</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528396" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528396</a></td>
+<td valign="top">F318</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528397" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528397</a></td>
+<td valign="top">F319</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528398" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528398</a></td>
+<td valign="top">F320</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528399" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528399</a></td>
+<td valign="top">F321</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528400" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528400</a></td>
+<td valign="top">F322</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528401" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528401</a></td>
+<td valign="top">F323</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528402" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528402</a></td>
+<td valign="top">F324</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528403" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528403</a></td>
+<td valign="top">F325</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528404" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528404</a></td>
+<td valign="top">F326</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528405" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528405</a></td>
+<td valign="top">F327</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528406" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528406</a></td>
+<td valign="top">F328</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528407" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528407</a></td>
+<td valign="top">F329</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528408" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528408</a></td>
+<td valign="top">F330</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528409" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528409</a></td>
+<td valign="top">F331</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528410" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528410</a></td>
+<td valign="top">F332</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528411" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528411</a></td>
+<td valign="top">F333</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528412" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528412</a></td>
+<td valign="top">F334</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528413" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528413</a></td>
+<td valign="top">F335</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528414" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528414</a></td>
+<td valign="top">F336</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528415" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528415</a></td>
+<td valign="top">F337</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528416" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528416</a></td>
+<td valign="top">F338</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528417" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528417</a></td>
+<td valign="top">F339</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528418" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528418</a></td>
+<td valign="top">F340</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528419" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528419</a></td>
+<td valign="top">F341</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528420" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528420</a></td>
+<td valign="top">F342</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528421" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528421</a></td>
+<td valign="top">F343</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528422" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528422</a></td>
+<td valign="top">F344</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528423" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528423</a></td>
+<td valign="top">F345</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528424" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528424</a></td>
+<td valign="top">F346</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528425" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528425</a></td>
+<td valign="top">F347</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528426" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528426</a></td>
+<td valign="top">F348</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528427" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528427</a></td>
+<td valign="top">F349</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528428" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528428</a></td>
+<td valign="top">F350</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528429" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528429</a></td>
+<td valign="top">F351</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528430" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528430</a></td>
+<td valign="top">F352</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528431" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528431</a></td>
+<td valign="top">F353</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528432" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528432</a></td>
+<td valign="top">F354</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528433" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528433</a></td>
+<td valign="top">F355</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528434" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528434</a></td>
+<td valign="top">F356</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528435" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528435</a></td>
+<td valign="top">F357</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528436" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528436</a></td>
+<td valign="top">F358</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528437" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528437</a></td>
+<td valign="top">F359</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528438" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528438</a></td>
+<td valign="top">F360</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528439" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528439</a></td>
+<td valign="top">F361</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528440" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528440</a></td>
+<td valign="top">F362</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528441" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528441</a></td>
+<td valign="top">F363</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528442" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528442</a></td>
+<td valign="top">F364</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528443" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528443</a></td>
+<td valign="top">F365</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528444" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528444</a></td>
+<td valign="top">F366</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528445" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528445</a></td>
+<td valign="top">F367</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528446" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528446</a></td>
+<td valign="top">F368</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528447" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528447</a></td>
+<td valign="top">F369</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528448" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528448</a></td>
+<td valign="top">F370</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528449" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528449</a></td>
+<td valign="top">F371</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528450" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528450</a></td>
+<td valign="top">F372</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528451" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528451</a></td>
+<td valign="top">F373</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528452" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528452</a></td>
+<td valign="top">F374</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528453" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528453</a></td>
+<td valign="top">F375</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528454" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528454</a></td>
+<td valign="top">F376</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528455" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528455</a></td>
+<td valign="top">F377</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528456" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528456</a></td>
+<td valign="top">F378</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528457" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528457</a></td>
+<td valign="top">F379</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528458" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528458</a></td>
+<td valign="top">F380</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528459" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528459</a></td>
+<td valign="top">F381</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528460" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528460</a></td>
+<td valign="top">F382</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528461" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528461</a></td>
+<td valign="top">F383</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528462" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528462</a></td>
+<td valign="top">F384</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528463" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528463</a></td>
+<td valign="top">F385</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528464" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528464</a></td>
+<td valign="top">F386</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528465" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528465</a></td>
+<td valign="top">F387</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528466" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528466</a></td>
+<td valign="top">F388</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528467" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528467</a></td>
+<td valign="top">F389</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528468" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528468</a></td>
+<td valign="top">F390</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528469" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528469</a></td>
+<td valign="top">F391</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528470" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528470</a></td>
+<td valign="top">F392</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528471" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528471</a></td>
+<td valign="top">F393</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528472" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528472</a></td>
+<td valign="top">F394</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528473" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528473</a></td>
+<td valign="top">F395</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528474" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528474</a></td>
+<td valign="top">F396</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528475" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528475</a></td>
+<td valign="top">F397</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528476" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528476</a></td>
+<td valign="top">F398</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528477" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528477</a></td>
+<td valign="top">F399</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528478" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528478</a></td>
+<td valign="top">F400</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528479" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528479</a></td>
+<td valign="top">F401</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528480" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528480</a></td>
+<td valign="top">F402</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528481" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528481</a></td>
+<td valign="top">F403</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528482" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528482</a></td>
+<td valign="top">F404</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528483" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528483</a></td>
+<td valign="top">F405</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528484" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528484</a></td>
+<td valign="top">F406</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528485" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528485</a></td>
+<td valign="top">F407</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528486" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528486</a></td>
+<td valign="top">F408</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528487" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528487</a></td>
+<td valign="top">F409</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528488" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528488</a></td>
+<td valign="top">F410</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528489" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528489</a></td>
+<td valign="top">F411</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528490" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528490</a></td>
+<td valign="top">F412</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528491" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528491</a></td>
+<td valign="top">F413</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528492" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528492</a></td>
+<td valign="top">F414</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528493" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528493</a></td>
+<td valign="top">F415</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528494" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528494</a></td>
+<td valign="top">F416</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528495" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528495</a></td>
+<td valign="top">F417</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528496" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528496</a></td>
+<td valign="top">F418</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528497" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528497</a></td>
+<td valign="top">F419</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528498" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528498</a></td>
+<td valign="top">F420</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528499" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528499</a></td>
+<td valign="top">F421</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528500" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528500</a></td>
+<td valign="top">F422</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528501" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528501</a></td>
+<td valign="top">F423</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528502" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528502</a></td>
+<td valign="top">F424</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528503" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528503</a></td>
+<td valign="top">F425</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528504" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528504</a></td>
+<td valign="top">F426</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528505" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528505</a></td>
+<td valign="top">F427</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528506" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528506</a></td>
+<td valign="top">F428</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528507" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528507</a></td>
+<td valign="top">F429</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528508" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528508</a></td>
+<td valign="top">F430</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528509" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528509</a></td>
+<td valign="top">F431</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528510" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528510</a></td>
+<td valign="top">F432</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528511" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528511</a></td>
+<td valign="top">F433</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528512" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528512</a></td>
+<td valign="top">F434</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528513" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528513</a></td>
+<td valign="top">F435</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528514" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528514</a></td>
+<td valign="top">F436</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528515" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528515</a></td>
+<td valign="top">F437</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528516" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528516</a></td>
+<td valign="top">F438</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528517" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528517</a></td>
+<td valign="top">F439</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528518" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528518</a></td>
+<td valign="top">F440</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528519" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528519</a></td>
+<td valign="top">F441</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528520" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528520</a></td>
+<td valign="top">F442</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528521" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528521</a></td>
+<td valign="top">F443</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528522" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528522</a></td>
+<td valign="top">F444</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528523" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528523</a></td>
+<td valign="top">F445</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528524" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528524</a></td>
+<td valign="top">F446</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528525" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528525</a></td>
+<td valign="top">F447</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528526" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528526</a></td>
+<td valign="top">F448</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528527" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528527</a></td>
+<td valign="top">F449</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528528" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528528</a></td>
+<td valign="top">F450</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528529" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528529</a></td>
+<td valign="top">F451</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528530" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528530</a></td>
+<td valign="top">F452</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528531" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528531</a></td>
+<td valign="top">F453</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528532" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528532</a></td>
+<td valign="top">F454</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528533" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528533</a></td>
+<td valign="top">F455</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528534" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528534</a></td>
+<td valign="top">F456</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528535" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528535</a></td>
+<td valign="top">F457</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528536" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528536</a></td>
+<td valign="top">F458</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528537" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528537</a></td>
+<td valign="top">F459</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528538" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528538</a></td>
+<td valign="top">F460</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528539" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528539</a></td>
+<td valign="top">F461</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528540" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528540</a></td>
+<td valign="top">F462</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528541" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528541</a></td>
+<td valign="top">F463</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528542" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528542</a></td>
+<td valign="top">F464</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528543" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528543</a></td>
+<td valign="top">F465</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528544" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528544</a></td>
+<td valign="top">F466</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528545" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528545</a></td>
+<td valign="top">F467</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528546" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528546</a></td>
+<td valign="top">F468</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528547" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528547</a></td>
+<td valign="top">F469</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528548" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528548</a></td>
+<td valign="top">F470</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528549" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528549</a></td>
+<td valign="top">F471</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528550" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528550</a></td>
+<td valign="top">F472</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528551" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528551</a></td>
+<td valign="top">F473</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528552" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528552</a></td>
+<td valign="top">F474</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528553" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528553</a></td>
+<td valign="top">F475</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528554" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528554</a></td>
+<td valign="top">F476</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528555" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528555</a></td>
+<td valign="top">F477</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528556" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528556</a></td>
+<td valign="top">F478</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528557" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528557</a></td>
+<td valign="top">F479</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528558" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528558</a></td>
+<td valign="top">F480</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528559" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528559</a></td>
+<td valign="top">F481</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528560" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528560</a></td>
+<td valign="top">F482</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528561" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528561</a></td>
+<td valign="top">F483</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528562" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528562</a></td>
+<td valign="top">F484</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528563" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528563</a></td>
+<td valign="top">F485</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528564" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528564</a></td>
+<td valign="top">F486</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528565" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528565</a></td>
+<td valign="top">F487</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528566" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528566</a></td>
+<td valign="top">F488</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528567" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528567</a></td>
+<td valign="top">F489</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528568" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528568</a></td>
+<td valign="top">F490</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528569" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528569</a></td>
+<td valign="top">F491</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528570" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528570</a></td>
+<td valign="top">F492</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528571" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528571</a></td>
+<td valign="top">F493</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528572" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528572</a></td>
+<td valign="top">F494</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528573" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528573</a></td>
+<td valign="top">F495</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528574" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528574</a></td>
+<td valign="top">F496</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528575" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528575</a></td>
+<td valign="top">F497</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528576" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528576</a></td>
+<td valign="top">F498</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528577" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528577</a></td>
+<td valign="top">F499</td>
+</tr>
+<tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2528578" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSM2528578</a></td>
+<td valign="top">F500</td>
+</tr>
+<tr><td colspan="2">...<i><br><a href="https://www.ncbi.nlm.nih.gov/geo/browse/?view=samples&amp;series=96058">Accession list truncated, click here to browse through all related public accessions</a><br><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96058&amp;targ=self&amp;view=brief&amp;form=text">You can also download a list of all accessions here</a></i></td></tr>
+</tbody></table></div>
+</td>
+</tr>
+<tr valign="top"><td colspan="2">This SubSeries is part of SuperSeries:</td></tr>
+<tr valign="top"><td colspan="2" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)"><table cellpadding="3" style="position:relative;top:-5px;left:-5px"><tbody><tr><td valign="top"><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE81540" onmouseout="onLinkOut(&#39;HelpMessage&#39; , geo_empty_help)" onmouseover="onLinkOver(&#39;HelpMessage&#39; , geoaxema_recenter)">GSE81540</a></td>
+<td valign="top">Clinical Value of RNA Sequencing–Based Classifiers for Prediction of the Five Conventional Breast Cancer Biomarkers: A Report From the Population-Based Multicenter Sweden Cancerome Analysis Network—Breast Initiative [superseries]</td>
+</tr></tbody></table></td></tr>
+<tr valign="top"><td colspan="2"><strong>Relations</strong></td></tr>
+<tr valign="top"><td>BioProject</td>
+<td><a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA378692">PRJNA378692</a></td>
+</tr>
+</tbody></table>
+<br><span id="gdv"></span><table cellspacing="3" width="600"><tbody><tr bgcolor="#eeeeee"><td><strong>Download family</strong></td>
+<td><strong>Format</strong></td>
+</tr>
+<tr><td><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96058/soft/" target="_blank">SOFT formatted family file(s)</a></td>
+<td>SOFT<a href="javascript:RPopUpWindow_Set(geoaxema_famsoft,260,120,&#39;&#39;,&#39;&#39;,&#39;#E1EAE6&#39;,&#39;&#39;,&#39;#538AA9&#39;,&#39;MessageBox2&#39;);" onmouseout="RPopUpWindow_Stop()"><img alt="Help" height="11" src="./GEO Accession viewer_files/long_help4.gif" style="border: none" width="19"></a></td>
+</tr>
+<tr><td><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96058/miniml/" target="_blank">MINiML formatted family file(s)</a></td>
+<td>MINiML<a href="javascript:RPopUpWindow_Set(geoaxema_famminiml,260,120,&#39;&#39;,&#39;&#39;,&#39;#E1EAE6&#39;,&#39;&#39;,&#39;#538AA9&#39;,&#39;MessageBox2&#39;);" onmouseout="RPopUpWindow_Stop()"><img alt="Help" height="11" src="./GEO Accession viewer_files/long_help4.gif" style="border: none" width="19"></a></td>
+</tr>
+<tr><td><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96058/matrix/" target="_blank">Series Matrix File(s)</a></td>
+<td>TXT<a href="javascript:RPopUpWindow_Set(geoaxema_fammatrix,260,210,&#39;&#39;,&#39;&#39;,&#39;#E1EAE6&#39;,&#39;&#39;,&#39;#538AA9&#39;,&#39;MessageBox2&#39;);" onmouseout="RPopUpWindow_Stop()"><img alt="Help" height="11" src="./GEO Accession viewer_files/long_help4.gif" style="border: none" width="19"></a></td>
+</tr>
+</tbody></table>
+<br><table cellpadding="2" cellspacing="2" width="600"><tbody><tr bgcolor="#eeeeee" valign="top"><td align="middle" bgcolor="#CCCCCC"><strong>Supplementary file</strong></td>
+<td align="middle" bgcolor="#CCCCCC"><strong>Size</strong></td>
+<td align="middle" bgcolor="#CCCCCC"><strong>Download</strong></td>
+<td align="middle" bgcolor="#CCCCCC"><strong>File type/resource</strong></td>
+</tr>
+<tr valign="top"><td bgcolor="#DEEBDC">GSE96058_UCSC_hg38_knownGenes_22sep2014.gtf.gz</td>
+<td bgcolor="#DEEBDC" title="20808999">19.8 Mb</td>
+<td bgcolor="#DEEBDC"><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96058/suppl/GSE96058%5FUCSC%5Fhg38%5FknownGenes%5F22sep2014.gtf.gz">(ftp)</a><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE96058&amp;format=file&amp;file=GSE96058%5FUCSC%5Fhg38%5FknownGenes%5F22sep2014%2Egtf%2Egz">(http)</a></td>
+<td bgcolor="#DEEBDC">GTF</td>
+</tr>
+<tr valign="top"><td bgcolor="#EEEEEE">GSE96058_gene_expression_3273_samples_and_136_replicates_transformed.csv.gz</td>
+<td bgcolor="#EEEEEE" title="591676211">564.3 Mb</td>
+<td bgcolor="#EEEEEE"><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96058/suppl/GSE96058%5Fgene%5Fexpression%5F3273%5Fsamples%5Fand%5F136%5Freplicates%5Ftransformed.csv.gz">(ftp)</a><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE96058&amp;format=file&amp;file=GSE96058%5Fgene%5Fexpression%5F3273%5Fsamples%5Fand%5F136%5Freplicates%5Ftransformed%2Ecsv%2Egz">(http)</a></td>
+<td bgcolor="#EEEEEE">CSV</td>
+</tr>
+<tr valign="top"><td bgcolor="#DEEBDC">GSE96058_transcript_expression_3273_samples_and_136_replicates.csv.gz</td>
+<td bgcolor="#DEEBDC" title="860717799">820.8 Mb</td>
+<td bgcolor="#DEEBDC"><a href="https://ftp.ncbi.nlm.nih.gov/geo/series/GSE96nnn/GSE96058/suppl/GSE96058%5Ftranscript%5Fexpression%5F3273%5Fsamples%5Fand%5F136%5Freplicates.csv.gz">(ftp)</a><a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE96058&amp;format=file&amp;file=GSE96058%5Ftranscript%5Fexpression%5F3273%5Fsamples%5Fand%5F136%5Freplicates%2Ecsv%2Egz">(http)</a></td>
+<td bgcolor="#DEEBDC">CSV</td>
+</tr>
+<tr><td class="message">Raw data provided as supplementary file</td></tr>
+<tr><td class="message">Processed data are available on Series record</td></tr>
+</tbody></table>
+<span id="customDlArea"></span><br></td></tr></tbody></table>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+        <td background="./GEO Accession viewer_files/main_right_bg.gif"><img src="./GEO Accession viewer_files/main_right_bg.gif" width="4" height="3" alt="" border="0"></td>
+    </tr>
+    <tr>
+        <td background="./GEO Accession viewer_files/but_left.gif"><img src="./GEO Accession viewer_files/but_left.gif" width="4" height="4" alt="" border="0"></td>
+        <td width="10000" bgcolor="#FFFFFF" background="./GEO Accession viewer_files/but_mid_bg.gif"><img src="./GEO Accession viewer_files/pixel.gif" width="1" height="1" alt="" border="0"></td>
+        <td align="right" background="./GEO Accession viewer_files/but_right.gif"><img src="./GEO Accession viewer_files/but_right.gif" alt="" width="4" height="4" border="0"></td>
+    </tr>
+</tbody></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tbody><tr>
+        <td width="99%"><img src="./GEO Accession viewer_files/pixel.gif" width="1" height="1" alt="" border="0"></td><td valign="top" align="right" nowrap="">
+	        <span class="HELPBAR">|<a href="https://www.nlm.nih.gov/"> NLM </a>|<a href="https://www.nih.gov/" class="HELPBAR"> NIH </a>|<a href="mailto:geo@ncbi.nlm.nih.gov" class="HELPBAR"> GEO Help </a>|<a href="https://www.ncbi.nlm.nih.gov/geo/info/disclaimer.html" class="HELPBAR"> Disclaimer </a>|<a href="https://www.nlm.nih.gov/accessibility.html" class="HELPBAR"> Accessibility </a>|</span><br>
+        </td>
+	</tr>
+</tbody></table>
+
+
+<map name="unlmenu">
+<area alt="NCBI Home" coords="2,0,39,15" href="https://www.ncbi.nlm.nih.gov/" onmouseover="changpics(unl_menu_pix, unl_menu_home_a)" onmouseout="changpics(unl_menu_pix, unl_menu_noa)">
+<area alt="NCBI Search" coords="40,0,91,15" href="https://www.ncbi.nlm.nih.gov/ncbisearch/" onmouseover="changpics(unl_menu_pix, unl_menu_search_a)" onmouseout="changpics(unl_menu_pix, unl_menu_noa)">
+<area alt="NCBI SiteMap" coords="92,0,143,15" href="https://www.ncbi.nlm.nih.gov/Sitemap/" onmouseover="changpics(unl_menu_pix, unl_menu_sitemap_a)" onmouseout="changpics(unl_menu_pix, unl_menu_noa)">
+</map>
+
+<script type="text/javascript" src="./GEO Accession viewer_files/InstrumentPageStarterJS.js"> </script>
+
+
+
+
+</td></tr></tbody></table><div id="ZN_dikYWqsjiUWN0Q5"></div><div style="display: none;">External link. Please review our <a href="https://www.nlm.nih.gov/privacy.html">privacy policy</a>.</div><script id="_fed_an_ua_tag" text="" charset="" type="text/javascript" src="./GEO Accession viewer_files/Universal-Federated-Analytics-Min.js"></script><script type="text/javascript" src="./GEO Accession viewer_files/saved_resource"></script><div style="text-align:center"><a id="vdp" href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability Disclosure</a></div><script src="./GEO Accession viewer_files/CoreModule.js" defer=""></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

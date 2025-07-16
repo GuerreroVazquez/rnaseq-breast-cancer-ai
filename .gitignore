@@ -25,3 +25,4 @@ tests/integration/.streamlit
 *.toml
 tests/integration/models
 tests/unit/models
+*.bin

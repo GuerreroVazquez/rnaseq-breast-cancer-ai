@@ -80,18 +80,5 @@ python scripts/your_script.py --help
     <li><code>models/</code>: (To be used) Saved AI/ML models</li>
     <li><code>requirements.txt</code>: Python dependencies list</li>
     <li><code>.gitignore</code>: Files and folders to exclude from version control</li>
-    <li><code>README.html</code>: Project documentation (this file)</li>
-  </ul>
-
-  <h2>🔧 Dependencies</h2>
-  <p>This project requires Python 3.8+ and uses:</p>
-  <ul>
-    <li><code>pandas</code></li>
-    <li><code>numpy</code></li>
-    <li><code>matplotlib</code></li>
-    <li><code>scikit-learn</code></li>
-    <li><code>seaborn</code></li>
-    <li><code>jupyter</code></li>
-    <li><code>streamlit</code></li>
   </ul>
   
